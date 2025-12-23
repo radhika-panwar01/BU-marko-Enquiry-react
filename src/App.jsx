@@ -19,11 +19,11 @@ function App() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        // Initialize AOS after component mounts
-        if (window.AOS) {
-            window.AOS.init();
+        if (typeof window !== 'undefined' && window.AOS) {
+            window.AOS.init()
         }
-    }, []);
+    }, [])
+
 
     const openInquiryModal = () => {
         setIsModalOpen(true);
