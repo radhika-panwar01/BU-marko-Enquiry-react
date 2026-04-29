@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import dashboard from "../assets/images/section4.png";
 import illustration from "../assets/images/pana.png";
 
-const ProductPage = ({ onOpenInquiry }) => {
+const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
         if (typeof window !== 'undefined' && window.AOS) {
@@ -123,6 +123,7 @@ const ProductPage = ({ onOpenInquiry }) => {
                             {
                                 icon: "fa-solid fa-chart-line",
                                 title: "Sales & Booking Tools",
+                                page: "product-sales-booking",
                                 desc: "Manage reservations seamlessly, build custom itineraries, and close deals significantly faster.",
                                 color: "text-green-500 bg-green-50 border-green-100"
                             },
@@ -153,7 +154,13 @@ const ProductPage = ({ onOpenInquiry }) => {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="bg-[#fafafa] p-8 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:bg-white transition-all duration-300 group"
+                                onClick={() => {
+                                    if (item.page && setCurrentPage) {
+                                        setCurrentPage(item.page);
+                                        window.scrollTo(0, 0);
+                                    }
+                                }}
+                                className="cursor-pointer bg-[#fafafa] p-8 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:bg-white transition-all duration-300 group"
                                 data-aos="fade-up"
                                 data-aos-delay={(i % 3) * 100}
                             >
