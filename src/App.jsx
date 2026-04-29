@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import InquiryForm from './components/InquiryForm';
 import Footer from './components/Footer';
 import Pricing from './components/Pricing';
+import ProductPage from './components/ProductMain';
 
 // Images
 import card1 from './assets/images/card1.png';
@@ -335,6 +336,10 @@ function App() {
                 <main className="pt-20 min-h-[70vh]">
                     <Pricing onOpenInquiry={openInquiryModal} />
                 </main>
+            )}
+
+            {currentPage === 'product' && (
+                <ProductPage onOpenInquiry={openInquiryModal} />
             )}
 
             <Footer />

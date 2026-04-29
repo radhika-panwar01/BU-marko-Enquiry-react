@@ -42,26 +42,28 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
                     >
                         About
                     </button>
-
+                    {/* PRODUCT */}
+                    <button
+                        onClick={() => {
+                            setCurrentPage('product');
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }}
+                        className="text-brand-gray font-normal hover:text-brand-primary transition"
+                    >
+                        Product
+                    </button>
                     {/* FEATURE */}
                     <button
                         onClick={() => {
                             setCurrentPage('home');
                             setScrollTarget('features');
                         }}
+                        className="text-brand-gray font-normal hover:text-brand-primary transition"
                     >
                         Feature
                     </button>
 
-                    {/* PRODUCT */}
-                    <button
-                        onClick={() => {
-                            setCurrentPage('home');
-                            setScrollTarget('product');
-                        }}
-                    >
-                        Product
-                    </button>
+
 
                     {/* TESTIMONIAL */}
                     <button
@@ -69,6 +71,7 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
                             setCurrentPage('home');
                             setScrollTarget('testimonial');
                         }}
+                        className="text-brand-gray font-normal hover:text-brand-primary transition"
                     >
                         Testimonial
                     </button>
