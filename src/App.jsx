@@ -3,10 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import InquiryForm from './components/InquiryForm';
 import Footer from './components/Footer';
-import Pricing from './components/Pricing';
-import ProductPage from './components/ProductMain';
-import SalesBookingPage from './components/Product_subpages/Sales&Booking';
-import FinancialManagementPage from './components/Product_subpages/Financial-Management';
+import { PAGES, isValidPage } from './pages';
 // Images
 import card1 from './assets/images/card1.png';
 import card2 from './assets/images/card2.png';
@@ -20,10 +17,18 @@ import marketing3 from './assets/images/marketing3.png';
 
 function App() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [currentPage, setCurrentPage] = useState(() => {
-        return sessionStorage.getItem('currentPage') || 'home';
+    const [currentPage, setCurrentPageRaw] = useState(() => {
+        const saved = sessionStorage.getItem('currentPage');
+        return isValidPage(saved) ? saved : 'home';
     });
     const [scrollTarget, setScrollTarget] = useState(null);
+
+    // Guarded setter — silently falls back to 'home' on unknown keys + smooth scrolls to top.
+    const setCurrentPage = (key) => {
+        const next = isValidPage(key) ? key : 'home';
+        setCurrentPageRaw(next);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     useEffect(() => {
         const handleBeforeUnload = () => {
@@ -333,21 +338,27 @@ function App() {
                 </main>
             )}
 
-            {currentPage === 'pricing' && (
-                <main className="pt-20 min-h-[70vh]">
-                    <Pricing onOpenInquiry={openInquiryModal} />
-                </main>
-            )}
+            {(() => {
+                if (currentPage === 'home') return null; // home rendered inline above
+                const page = PAGES[currentPage];
+                if (!page || !page.Component) return null;
+                const PageComponent = page.Component;
+                const wrapPricing = currentPage === 'pricing';
+                const content = (
+                    <PageComponent
+                        onOpenInquiry={openInquiryModal}
+                        setCurrentPage={setCurrentPage}
+                        setScrollTarget={setScrollTarget}
+                    />
+                );
+                return wrapPricing ? <main className="pt-[60px] md:pt-20 min-h-[70vh]">{content}</main> : content;
+            })()}
 
-            {currentPage === 'product' && (
-                <ProductPage onOpenInquiry={openInquiryModal} setCurrentPage={setCurrentPage} />
-            )}
-
-            {currentPage === "product-sales-booking" && <SalesBookingPage onOpenInquiry={openInquiryModal} />}
-
-            {currentPage === "product-financial-management" && <FinancialManagementPage onOpenInquiry={openInquiryModal} />}
-
-            <Footer />
+            <Footer
+                setCurrentPage={setCurrentPage}
+                setScrollTarget={setScrollTarget}
+                onOpenInquiry={openInquiryModal}
+            />
 
             <InquiryForm isOpen={isModalOpen} onClose={closeInquiryModal} />
         </>

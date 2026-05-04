@@ -20,7 +20,7 @@ const SalesBookingPage = ({ onOpenInquiry }) => {
     }, []);
 
     return (
-        <main className="pt-20 bg-white font-sans overflow-hidden">
+        <main className="pt-[60px] md:pt-20 bg-white font-sans overflow-hidden">
             {/* HERO SECTION */}
             <section className="relative pt-20 pb-20 lg:pb-28 bg-white overflow-hidden border-b border-gray-100">
                 <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-brand-light pointer-events-none rounded-l-full blur-3xl opacity-60"></div>
@@ -33,24 +33,24 @@ const SalesBookingPage = ({ onOpenInquiry }) => {
                                 Powerful Sales Tools
                             </div>
 
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark tracking-tight leading-tight mb-6">
+                            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-dark tracking-tight leading-tight mb-5">
                                 Supercharge Your <span className="text-brand-primary">Sales & Booking</span> Process
                             </h1>
 
-                            <p className="text-brand-gray text-md md:text-lg mb-8 leading-relaxed font-light">
+                            <p className="text-brand-gray text-sm md:text-base mb-7 leading-relaxed font-light">
                                 Streamline bookings, build beautiful custom itineraries, and manage client relationships effortlessly — all from one unified dashboard.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={onOpenInquiry}
-                                    className="bg-brand-primary text-white px-8 py-4 rounded-xl font-medium text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300"
+                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300"
                                 >
                                     Request Demo
                                 </button>
                                 <button
                                     onClick={() => document.getElementById('core-features').scrollIntoView({ behavior: 'smooth' })}
-                                    className="bg-white text-brand-dark border border-gray-200 px-8 py-4 rounded-xl font-medium text-lg hover:border-brand-primary hover:text-brand-primary transition-all duration-300"
+                                    className="bg-white text-brand-dark border border-gray-200 px-6 py-2 rounded-xl font-medium text-lg hover:border-brand-primary hover:text-brand-primary transition-all duration-300"
                                 >
                                     Explore Features
                                 </button>
@@ -371,7 +371,7 @@ const SalesBookingPage = ({ onOpenInquiry }) => {
                     <div className="pt-6">
                         <button
                             onClick={onOpenInquiry}
-                            className="bg-white text-brand-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                            className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             Request Your Demo
                         </button>

@@ -45,7 +45,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                             onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })}
                             className="bg-white text-gray-700 border border-gray-200 px-6 py-3 rounded-xl font-medium text-md hover:border-brand-primary hover:text-brand-primary hover:shadow-sm transition-all duration-300"
                         >
-                            Explore Features
+                            Explore Products
                         </button>
                     </div>
                 </div>
@@ -108,49 +108,71 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
             <section id="features" className="py-24 bg-white relative border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Everything You Need To Thrive</h2>
-                        <p className="text-brand-gray text-lg font-light">A complete suite of tools designed to simplify operations and accelerate growth.</p>
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 text-brand-primary font-medium text-xs mb-4 border border-green-100">
+                            <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
+                            Our Product Suite
+                        </div>
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Industry-Tailored Products for Travel & Service Businesses</h2>
+                        <p className="text-brand-gray text-lg font-light">A complete portfolio built for the way you actually run your operations.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
                         {[
                             {
-                                icon: "fa-solid fa-layer-group",
-                                title: "All-in-One System",
-                                desc: "Run your entire business from one platform — bookings, CRM, operations & finances.",
+                                icon: "fa-solid fa-hotel",
+                                title: "Hotel Management System",
+                                page: "product-sales-booking",
+                                desc: "Manage hotel bookings, guest operations, and availability from one centralized platform.",
                                 color: "text-blue-500 bg-blue-50 border-blue-100"
                             },
                             {
-                                icon: "fa-solid fa-chart-line",
-                                title: "Sales & Booking Tools",
-                                page: "product-sales-booking",
-                                desc: "Manage reservations seamlessly, build custom itineraries, and close deals significantly faster.",
+                                icon: "fa-solid fa-globe",
+                                title: "All-in-One Travel Management System",
+                                page: "product-travel-management",
+                                desc: "Run your entire travel business — bookings, CRM, operations, and finance — in one connected system.",
                                 color: "text-green-500 bg-green-50 border-green-100"
                             },
                             {
-                                icon: "fa-solid fa-truck-fast",
-                                title: "Operations & Logistics",
-                                desc: "Take full control of your fleet, guides, schedules, and resources seamlessly without hassle.",
-                                color: "text-orange-500 bg-orange-50 border-orange-100"
-                            },
-                            {
-                                icon: "fa-solid fa-wallet",
-                                title: "Financial Management",
+                                icon: "fa-solid fa-calculator",
+                                title: "Accounting System for Travel Industry",
                                 page: "product-financial-management",
-                                desc: "Track payments, automate invoices, and monitor expenses with full clarity and reporting.",
+                                desc: "The best accounting solution for rentals, agencies, DMCs, tour guides, ferry, and flight companies.",
                                 color: "text-purple-500 bg-purple-50 border-purple-100"
                             },
                             {
-                                icon: "fa-solid fa-robot",
-                                title: "Automation & Productivity",
-                                desc: "Automate tedious workflows, client reminders, and significantly reduce manual data entry.",
+                                icon: "fa-solid fa-truck-fast",
+                                title: "Fleet Management System",
+                                page: "product-operations-logistics",
+                                desc: "Track vehicles, manage maintenance, and assign drivers in real time from one dashboard.",
+                                color: "text-orange-500 bg-orange-50 border-orange-100"
+                            },
+                            {
+                                icon: "fa-solid fa-map-location-dot",
+                                title: "Tour Guide App",
+                                page: "product-tour-guide-app",
+                                desc: "Empower guides with schedules, trip details, and real-time updates for seamless tour execution.",
+                                color: "text-yellow-600 bg-yellow-50 border-yellow-100"
+                            },
+                            {
+                                icon: "fa-solid fa-id-card-clip",
+                                title: "Driver App",
+                                page: "product-driver-app",
+                                desc: "Manage driver assignments, routes, and trip updates with a dedicated mobile-friendly interface.",
+                                color: "text-red-500 bg-red-50 border-red-100"
+                            },
+                            {
+                                icon: "fa-solid fa-users-gear",
+                                title: "Human Resource App",
+                                page: "product-hr-app",
+                                desc: "Handle employee management, attendance, payroll, and performance — all in one place.",
                                 color: "text-pink-500 bg-pink-50 border-pink-100"
                             },
                             {
-                                icon: "fa-solid fa-face-smile",
-                                title: "Client Experience Tools",
-                                desc: "Deliver premium customer experiences with dedicated dashboards & real-time updates.",
-                                color: "text-yellow-600 bg-yellow-50 border-yellow-100"
+                                icon: "fa-solid fa-file-signature",
+                                title: "Contract Management App",
+                                page: "product-contract-management",
+                                desc: "Create, manage, and track contracts with partners, clients, and suppliers efficiently.",
+                                color: "text-teal-500 bg-teal-50 border-teal-100"
                             }
                         ].map((item, i) => (
                             <div
@@ -161,9 +183,9 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         window.scrollTo(0, 0);
                                     }
                                 }}
-                                className="cursor-pointer bg-[#fafafa] p-8 rounded-2xl border border-gray-100 hover:border-gray-200 hover:shadow-xl hover:bg-white transition-all duration-300 group"
+                                className="cursor-pointer bg-[#fafafa] p-6 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full"
                                 data-aos="fade-up"
-                                data-aos-delay={(i % 3) * 100}
+                                data-aos-delay={(i % 4) * 100}
                             >
                                 <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-6 border transition-transform group-hover:scale-110 duration-300 ${item.color}`}>
                                     <i className={item.icon}></i>
@@ -171,7 +193,11 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-primary transition-colors">
                                     {item.title}
                                 </h3>
-                                <p className="text-brand-gray leading-relaxed text-sm font-light">{item.desc}</p>
+                                <p className="text-brand-gray leading-relaxed text-sm font-light flex-1">{item.desc}</p>
+                                <div className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-primary opacity-0 group-hover:opacity-100 -translate-x-1 group-hover:translate-x-0 transition-all duration-300">
+                                    <span>Explore</span>
+                                    <i className="fa-solid fa-arrow-right text-xs"></i>
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -303,10 +329,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                             Request Demo
                         </button>
                         <button
-                            onClick={() => {
-                                const headerPricingBtn = Array.from(document.querySelectorAll('button')).find(btn => btn.textContent === 'Pricing');
-                                if (headerPricingBtn) headerPricingBtn.click();
-                            }}
+                            onClick={() => setCurrentPage && setCurrentPage('pricing')}
                             className="bg-transparent border border-white/40 text-white px-6 py-3 rounded-xl font-semibold text-md hover:bg-white/10 transition-all duration-300"
                         >
                             View Pricing
