@@ -314,9 +314,22 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                 <div className="mx-3 px-4 md:px-14 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 text-left" data-aos="fade-right">
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-6 shadow-sm border border-green-100">
-                                <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
-                                Smart Finance Suite
+                            {/* Breadcrumb */}
+                            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs sm:text-sm text-brand-gray mb-4">
+                                <button
+                                    onClick={() => setCurrentPage && setCurrentPage('product')}
+                                    className="inline-flex items-center gap-1.5 hover:text-brand-primary transition font-medium"
+                                >
+                                    <i className="fa-solid fa-grip text-[11px]"></i>
+                                    Products
+                                </button>
+                                <i className="fa-solid fa-chevron-right text-[9px] text-gray-300"></i>
+                                <span className="text-brand-dark font-semibold">Accounting (Travel)</span>
+                            </nav>
+
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                                <i className="fa-solid fa-calculator text-[12px]"></i>
+                                Accounting System for Travel
                             </div>
 
                             <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-dark tracking-tight leading-tight mb-5">
