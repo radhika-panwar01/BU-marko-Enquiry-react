@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Pricing from './components/Pricing';
 import ProductPage from './components/ProductMain';
 import SalesBookingPage from './components/Product_subpages/Sales&Booking';
+import FinancialManagementPage from './components/Product_subpages/Financial-Management';
 // Images
 import card1 from './assets/images/card1.png';
 import card2 from './assets/images/card2.png';
@@ -342,7 +343,9 @@ function App() {
                 <ProductPage onOpenInquiry={openInquiryModal} setCurrentPage={setCurrentPage} />
             )}
 
-            {currentPage === "product-sales-booking" && <SalesBookingPage />}
+            {currentPage === "product-sales-booking" && <SalesBookingPage onOpenInquiry={openInquiryModal} />}
+
+            {currentPage === "product-financial-management" && <FinancialManagementPage onOpenInquiry={openInquiryModal} />}
 
             <Footer />
 

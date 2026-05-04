@@ -136,6 +136,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                             {
                                 icon: "fa-solid fa-wallet",
                                 title: "Financial Management",
+                                page: "product-financial-management",
                                 desc: "Track payments, automate invoices, and monitor expenses with full clarity and reporting.",
                                 color: "text-purple-500 bg-purple-50 border-purple-100"
                             },
