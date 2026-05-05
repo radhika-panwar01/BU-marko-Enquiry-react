@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import PricingSection from "../PricingSection";
+import { PRICING_DATA } from "../../pricingData";
 
 const MobileChrome = () => (
     <div className="bg-gray-50 px-2 py-2 flex items-center gap-1.5 border-b border-gray-100">
@@ -236,7 +238,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* CARDS */}
-            <section id="core-features" className="py-16 sm:py-24 bg-[#fafafa]">
+            <section id="core-features" className="py-[72px] bg-[#fafafa]">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark mb-4">Built for Guides Who Lead</h2>
@@ -259,7 +261,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 1 */}
-            <section className="py-16 sm:py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 space-y-5 sm:space-y-6" data-aos="fade-right">
@@ -285,7 +287,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 2 */}
-            <section className="py-16 sm:py-24 bg-brand-light overflow-hidden">
+            <section className="py-[72px] bg-brand-light overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 w-full order-2 lg:order-1 flex justify-center" data-aos="fade-right">
@@ -311,7 +313,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 3 */}
-            <section className="py-16 sm:py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 space-y-5 sm:space-y-6" data-aos="fade-right">
@@ -342,7 +344,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* VALUE STRIP */}
-            <section className="py-16 sm:py-24 bg-[#fafafa] border-y border-gray-100">
+            <section className="py-[72px] bg-[#fafafa] border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14 text-center">
                     <div className="max-w-3xl mx-auto" data-aos="fade-up">
                         <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-4">Designed to Get Out of Your Way</h2>
@@ -365,8 +367,15 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
+            <PricingSection
+                onOpenInquiry={onOpenInquiry}
+                plans={PRICING_DATA['tour-guide']}
+                title="Flexible Pricing for Tour Guides"
+                subtitle="Choose the right plan to empower your team and deliver unforgettable experiences."
+            />
+
             {/* CTA */}
-            <section className="py-16 sm:py-24 bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
@@ -375,7 +384,6 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                     <p className="text-base sm:text-xl text-green-50 font-light">Give your team the app that turns every tour into a five-star experience.</p>
                     <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                         <button onClick={onOpenInquiry} className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1">Request Demo</button>
-                        <button onClick={() => setCurrentPage && setCurrentPage('pricing')} className="bg-transparent border border-white/40 text-white px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all duration-300">View Pricing</button>
                     </div>
                 </div>
             </section>

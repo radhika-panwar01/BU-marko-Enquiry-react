@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import PricingSection from "../PricingSection";
+import { PRICING_DATA } from "../../pricingData";
 
 
 const BrowserChrome = ({ url }) => (
@@ -390,7 +392,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* TOP CARDS */}
-            <section id="core-features" className="py-24 bg-[#fafafa]">
+            <section id="core-features" className="py-[72px] bg-[#fafafa]">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                         <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Built for Financial Clarity</h2>
@@ -433,7 +435,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 1 — Accounting Suite (text left, mockups right) */}
-            <section className="py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 space-y-6" data-aos="fade-right">
@@ -486,7 +488,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 2 — Billing Automation (mockups left, text right) */}
-            <section className="py-24 bg-brand-light overflow-hidden">
+            <section className="py-[72px] bg-brand-light overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 order-2 lg:order-1 relative perspective-1000" data-aos="fade-right">
@@ -537,7 +539,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 3 — Value (Stay in Control) */}
-            <section className="py-24 bg-[#fafafa] border-y border-gray-100">
+            <section className="py-[72px] bg-[#fafafa] border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                         <div className="w-16 h-16 mx-auto rounded-full bg-brand-light flex items-center justify-center text-brand-primary text-2xl mb-4 shadow-sm">
@@ -590,7 +592,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                     </div>
                 </div>
             </section>
-            <section className="py-24 bg-white">
+            <section className="py-[72px] bg-white">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                         <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">A Connected Finance Stack</h2>
@@ -622,8 +624,16 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                     </div>
                 </div>
             </section>
+
+            <PricingSection
+                onOpenInquiry={onOpenInquiry}
+                plans={PRICING_DATA['accounting']}
+                title="Flexible Pricing for Financial Management"
+                subtitle="Choose the right plan to gain complete control over your business finances."
+            />
+
             {/* CTA */}
-            <section className="py-24 bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
@@ -641,12 +651,6 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                             className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                         >
                             Request Demo
-                        </button>
-                        <button
-                            onClick={() => setCurrentPage && setCurrentPage('pricing')}
-                            className="bg-transparent border border-white/40 text-white px-6 py-2 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300"
-                        >
-                            View Pricing
                         </button>
                     </div>
                 </div>

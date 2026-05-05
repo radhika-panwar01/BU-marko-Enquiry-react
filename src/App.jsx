@@ -360,7 +360,7 @@ function App() {
                 onOpenInquiry={openInquiryModal}
             />
 
-            <InquiryForm isOpen={isModalOpen} onClose={closeInquiryModal} />
+            <InquiryForm isOpen={isModalOpen} onClose={closeInquiryModal} currentPage={currentPage} />
         </>
     );
 }

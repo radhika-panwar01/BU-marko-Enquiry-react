@@ -5,6 +5,8 @@ import CRM1 from "../../assets/images/productimages/CRM-1.png";
 import CRM2 from "../../assets/images/productimages/CRM-2.png";
 import Itinerary from "../../assets/images/productimages/Tailor-1.png";
 import Tailor2 from "../../assets/images/productimages/Tailor-2.png";
+import PricingSection from "../PricingSection";
+import { PRICING_DATA } from "../../pricingData";
 
 
 
@@ -119,7 +121,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* THREE CARDS SECTION */}
-            <section id="core-features" className="py-24 bg-[#fafafa]">
+            <section id="core-features" className="py-[72px] bg-[#fafafa]">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                         <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">Core Capabilities</h2>
@@ -159,7 +161,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
             {/* DETAILED SECTIONS */}
 
             {/* 1. Booking */}
-            <section className="py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 space-y-6" data-aos="fade-right">
@@ -219,7 +221,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* 2. Itinerary */}
-            <section className="py-24 bg-brand-light overflow-hidden">
+            <section className="py-[72px] bg-brand-light overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 order-2 lg:order-1 relative group" data-aos="fade-right">
@@ -274,7 +276,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* 3. CRM */}
-            <section className="py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 space-y-6" data-aos="fade-right">
@@ -340,7 +342,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* EXTRA SECTION 1: Advanced Analytics */}
-            <section className="py-24 bg-[#fafafa] border-y border-gray-100 overflow-hidden">
+            <section className="py-[72px] bg-[#fafafa] border-y border-gray-100 overflow-hidden">
                 <div className="mx-3 px-4 md:px-14 text-center">
                     <div className="max-w-3xl mx-auto space-y-6" data-aos="fade-up">
                         <div className="w-16 h-16 mx-auto rounded-full bg-brand-light flex items-center justify-center text-brand-primary text-2xl mb-2 shadow-sm">
@@ -369,8 +371,15 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
+            <PricingSection 
+                onOpenInquiry={onOpenInquiry} 
+                plans={PRICING_DATA['hotel-booking']}
+                title="Flexible Pricing for Your Hotel"
+                subtitle="Choose the right plan to manage your rooms and guests efficiently."
+            />
+
             {/* CTA SECTION */}
-            <section className="py-24 bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>

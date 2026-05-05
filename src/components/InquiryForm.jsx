@@ -1,11 +1,34 @@
 import React, { useEffect, useState } from 'react';
 
-const InquiryForm = ({ isOpen, onClose }) => {
+const InquiryForm = ({ isOpen, onClose, currentPage }) => {
+    const products = [
+        "Hotel & Booking",
+        "All-in-One Travel Management",
+        "Accounting (Travel)",
+        "Fleet & Operations",
+        "Tour Guide App",
+        "Driver App",
+        "Human Resource App",
+        "Contract Management"
+    ];
+
+    const pageToProductMap = {
+        'product-sales-booking': "Hotel & Booking",
+        'product-travel-management': "All-in-One Travel Management",
+        'product-financial-management': "Accounting (Travel)",
+        'product-operations-logistics': "Fleet & Operations",
+        'product-tour-guide-app': "Tour Guide App",
+        'product-driver-app': "Driver App",
+        'product-hr-app': "Human Resource App",
+        'product-contract-management': "Contract Management"
+    };
+
     const [isVisible, setIsVisible] = useState(false);
     const [formData, setFormData] = useState({
         user_name: '',
         user_phone: '',
         user_email: '',
+        selectedProducts: [],
         project_details: '',
         captcha_answer: ''
     });
@@ -24,7 +47,20 @@ const InquiryForm = ({ isOpen, onClose }) => {
     useEffect(() => {
         if (isOpen) {
             generateCaptcha();
-            setFormData({ user_name: '', user_phone: '', user_email: '', project_details: '', captcha_answer: '' });
+            
+            let initialSelected = [];
+            if (currentPage && pageToProductMap[currentPage]) {
+                initialSelected = [pageToProductMap[currentPage]];
+            }
+
+            setFormData({ 
+                user_name: '', 
+                user_phone: '', 
+                user_email: '', 
+                selectedProducts: initialSelected,
+                project_details: '', 
+                captcha_answer: '' 
+            });
             setErrors({});
             setFormStatus({ type: '', message: '' });
 
@@ -55,6 +91,16 @@ const InquiryForm = ({ isOpen, onClose }) => {
             newErrors.user_email = "Please enter a valid email address";
         }
 
+        if (formData.selectedProducts.length === 0) {
+            newErrors.selectedProducts = "Please select at least one product";
+        }
+        
+        if (!formData.project_details.trim()) {
+            newErrors.project_details = "Project details are required";
+        } else if (formData.project_details.trim().length < 10) {
+            newErrors.project_details = "Please provide a bit more detail (min 10 characters)";
+        }
+
         if (parseInt(formData.captcha_answer) !== captcha.num1 + captcha.num2) {
             newErrors.captcha_answer = "Incorrect answer, please try again";
         }
@@ -77,6 +123,17 @@ const InquiryForm = ({ isOpen, onClose }) => {
 
         setFormData(prev => ({ ...prev, [name]: value }));
         if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
+    };
+
+    const handleProductToggle = (product) => {
+        setFormData(prev => {
+            const current = prev.selectedProducts;
+            const updated = current.includes(product)
+                ? current.filter(p => p !== product)
+                : [...current, product];
+            return { ...prev, selectedProducts: updated };
+        });
+        if (errors.selectedProducts) setErrors(prev => ({ ...prev, selectedProducts: '' }));
     };
 
     const handleSubmit = (e) => {
@@ -142,12 +199,46 @@ const InquiryForm = ({ isOpen, onClose }) => {
                                 {errors.user_email && <p className="text-red-500 text-xs mt-1">{errors.user_email}</p>}
                             </div>
 
+                            <div className="pt-2">
+                                <label className="block text-sm font-medium text-brand-dark mb-2">
+                                    Select Product(s)
+                                    <span className="block text-[11px] text-brand-gray font-light mt-0.5">Choose one or more products you are interested in.</span>
+                                </label>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    {products.map((product) => {
+                                        const isSelected = formData.selectedProducts.includes(product);
+                                        return (
+                                            <div
+                                                key={product}
+                                                onClick={() => handleProductToggle(product)}
+                                                className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-all duration-200 select-none ${
+                                                    isSelected 
+                                                        ? 'bg-green-50 border-brand-primary ring-1 ring-brand-primary/20' 
+                                                        : 'bg-gray-50 border-gray-100 hover:border-brand-primary/30 hover:bg-white shadow-sm'
+                                                }`}
+                                            >
+                                                <div className={`w-5 h-5 rounded flex items-center justify-center transition-colors ${
+                                                    isSelected ? 'bg-brand-primary' : 'border-2 border-gray-300 bg-white'
+                                                }`}>
+                                                    {isSelected && <i className="fa-solid fa-check text-white text-[10px]"></i>}
+                                                </div>
+                                                <span className={`text-sm font-medium ${isSelected ? 'text-brand-dark' : 'text-gray-600'}`}>
+                                                    {product}
+                                                </span>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                                {errors.selectedProducts && <p className="text-red-500 text-xs mt-1">{errors.selectedProducts}</p>}
+                            </div>
+
                             <div>
                                 <label className="block text-sm font-medium text-brand-dark mb-1">Project Details</label>
                                 <textarea name="project_details" id="project_details" rows="3"
                                     value={formData.project_details} onChange={handleChange}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition"
+                                    className={`w-full px-4 py-2 border rounded focus:ring-2 focus:border-transparent outline-none transition ${errors.project_details ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-brand-primary'}`}
                                     placeholder="Tell us about your project goals..."></textarea>
+                                {errors.project_details && <p className="text-red-500 text-xs mt-1">{errors.project_details}</p>}
                             </div>
 
                             <div>

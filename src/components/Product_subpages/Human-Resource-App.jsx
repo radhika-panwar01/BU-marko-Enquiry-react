@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import PricingSection from "../PricingSection";
+import { PRICING_DATA } from "../../pricingData";
 
 const BrowserChrome = ({ url }) => (
     <div className="bg-gray-50/90 backdrop-blur px-3 sm:px-4 py-2.5 sm:py-3 flex justify-between items-center border-b border-gray-100">
@@ -262,7 +264,7 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* CARDS */}
-            <section id="core-features" className="py-16 sm:py-24 bg-[#fafafa]">
+            <section id="core-features" className="py-[72px] bg-[#fafafa]">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16" data-aos="fade-up">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark mb-4">Everything HR, In One Place</h2>
@@ -286,7 +288,7 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 1 — Directory */}
-            <section className="py-16 sm:py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 space-y-5 sm:space-y-6" data-aos="fade-right">
@@ -310,7 +312,7 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 2 — Attendance + Payroll */}
-            <section className="py-16 sm:py-24 bg-brand-light overflow-hidden">
+            <section className="py-[72px] bg-brand-light overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 w-full order-2 lg:order-1 relative perspective-1000" data-aos="fade-right">
@@ -343,7 +345,7 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* SECTION 3 — Performance */}
-            <section className="py-16 sm:py-24 bg-white overflow-hidden">
+            <section className="py-[72px] bg-white overflow-hidden">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 space-y-5 sm:space-y-6" data-aos="fade-right">
@@ -367,7 +369,7 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             </section>
 
             {/* VALUE STRIP */}
-            <section className="py-16 sm:py-24 bg-[#fafafa] border-y border-gray-100">
+            <section className="py-[72px] bg-[#fafafa] border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14 text-center">
                     <div className="max-w-3xl mx-auto" data-aos="fade-up">
                         <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-4">An HR System People Don't Resent</h2>
@@ -390,8 +392,15 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
+            <PricingSection
+                onOpenInquiry={onOpenInquiry}
+                plans={PRICING_DATA['hr-app']}
+                title="Flexible Pricing for HR App"
+                subtitle="Choose the right plan to manage your workforce and streamline HR operations."
+            />
+
             {/* CTA */}
-            <section className="py-16 sm:py-24 bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
@@ -400,7 +409,6 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                     <p className="text-base sm:text-xl text-green-50 font-light">Bring records, payroll, and growth into one calm system — and give your team time back.</p>
                     <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                         <button onClick={onOpenInquiry} className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1">Request Demo</button>
-                        <button onClick={() => setCurrentPage && setCurrentPage('pricing')} className="bg-transparent border border-white/40 text-white px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-white/10 transition-all duration-300">View Pricing</button>
                     </div>
                 </div>
             </section>

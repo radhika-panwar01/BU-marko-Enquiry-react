@@ -51,7 +51,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section className="py-24 bg-[#fafafa]">
+            <section className="py-[72px] bg-[#fafafa]">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
                         <div className="lg:w-5/12 space-y-8" data-aos="fade-right">
@@ -105,7 +105,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section id="features" className="py-24 bg-white relative border-y border-gray-100">
+            <section id="features" className="py-[72px] bg-white relative border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 text-brand-primary font-medium text-xs mb-4 border border-green-100">
@@ -204,7 +204,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section className="py-24 bg-[#fafafa]">
+            <section className="py-[72px] bg-[#fafafa]">
                 <div className="mx-3 px-4 md:px-14 text-center">
                     <div data-aos="zoom-in">
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -233,7 +233,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section className="py-24 bg-gray-900 text-white relative overflow-hidden">
+            <section className="py-[72px] bg-gray-900 text-white relative overflow-hidden">
                 <div className="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-primary rounded-full mix-blend-screen filter blur-[100px] opacity-10"></div>
 
@@ -280,7 +280,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section className="py-24 bg-white border-y border-gray-100">
+            <section className="py-[72px] bg-white border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12" data-aos="fade-up">
                         Built for Every Type of Business
@@ -309,7 +309,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section className="py-24 bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
