@@ -43,7 +43,6 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
 
     const simpleNav = [
         { label: 'Home', onClick: () => goPage('home'), primary: true },
-        { label: 'Pricing', onClick: () => goPage('pricing') },
         { label: 'About', onClick: () => goSection('about') },
         { label: 'Feature', onClick: () => goSection('features') },
         { label: 'Testimonial', onClick: () => goSection('testimonial') },
@@ -68,12 +67,6 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
                         className="text-brand-secondary font-medium hover:text-brand-primary transition text-sm xl:text-base"
                     >
                         Home
-                    </button>
-                    <button
-                        onClick={() => goPage('pricing')}
-                        className="text-brand-gray font-normal hover:text-brand-primary transition text-sm xl:text-base"
-                    >
-                        Pricing
                     </button>
                     <button
                         onClick={() => goSection('about')}
@@ -177,7 +170,7 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
                 className={`lg:hidden fixed left-0 right-0 top-16 sm:top-20 bg-white border-t border-gray-100 shadow-xl max-h-[calc(100vh-4rem)] sm:max-h-[calc(100vh-5rem)] overflow-y-auto transition-all duration-300 origin-top ${mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}
             >
                 <nav className="px-5 py-2 flex flex-col divide-y divide-gray-100">
-                    {simpleNav.slice(0, 3).map((item) => (
+                    {simpleNav.slice(0, 2).map((item) => (
                         <button
                             key={item.label}
                             onClick={item.onClick}
@@ -223,7 +216,7 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
                         </div>
                     </div>
 
-                    {simpleNav.slice(3).map((item) => (
+                    {simpleNav.slice(2).map((item) => (
                         <button
                             key={item.label}
                             onClick={item.onClick}

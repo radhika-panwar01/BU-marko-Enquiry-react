@@ -35,7 +35,6 @@ const Footer = ({ setCurrentPage, setScrollTarget, onOpenInquiry }) => {
     const companyLinks = [
         { l: 'About us', onClick: () => goSection('about') },
         { l: 'Product', onClick: () => goPage('product') },
-        { l: 'Pricing', onClick: () => goPage('pricing') },
         { l: 'Testimonials', onClick: () => goSection('testimonial') },
         { l: 'Contact us', onClick: () => onOpenInquiry && onOpenInquiry() },
     ];

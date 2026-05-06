@@ -328,12 +328,6 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                         >
                             Request Demo
                         </button>
-                        <button
-                            onClick={() => setCurrentPage && setCurrentPage('pricing')}
-                            className="bg-transparent border border-white/40 text-white px-6 py-3 rounded-xl font-semibold text-md hover:bg-white/10 transition-all duration-300"
-                        >
-                            View Pricing
-                        </button>
                     </div>
                 </div>
             </section>
