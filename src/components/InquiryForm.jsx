@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { submitInquiry } from '../services/inquiryService';
 
 const InquiryForm = ({ isOpen, onClose, currentPage }) => {
     const products = [
@@ -35,6 +36,7 @@ const InquiryForm = ({ isOpen, onClose, currentPage }) => {
     const [errors, setErrors] = useState({});
     const [captcha, setCaptcha] = useState({ num1: 0, num2: 0 });
     const [formStatus, setFormStatus] = useState({ type: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const generateCaptcha = () => {
         setCaptcha({
@@ -47,19 +49,19 @@ const InquiryForm = ({ isOpen, onClose, currentPage }) => {
     useEffect(() => {
         if (isOpen) {
             generateCaptcha();
-            
+
             let initialSelected = [];
             if (currentPage && pageToProductMap[currentPage]) {
                 initialSelected = [pageToProductMap[currentPage]];
             }
 
-            setFormData({ 
-                user_name: '', 
-                user_phone: '', 
-                user_email: '', 
+            setFormData({
+                user_name: '',
+                user_phone: '',
+                user_email: '',
                 selectedProducts: initialSelected,
-                project_details: '', 
-                captcha_answer: '' 
+                project_details: '',
+                captcha_answer: ''
             });
             setErrors({});
             setFormStatus({ type: '', message: '' });
@@ -94,7 +96,7 @@ const InquiryForm = ({ isOpen, onClose, currentPage }) => {
         if (formData.selectedProducts.length === 0) {
             newErrors.selectedProducts = "Please select at least one product";
         }
-        
+
         if (!formData.project_details.trim()) {
             newErrors.project_details = "Project details are required";
         } else if (formData.project_details.trim().length < 10) {
@@ -136,15 +138,36 @@ const InquiryForm = ({ isOpen, onClose, currentPage }) => {
         if (errors.selectedProducts) setErrors(prev => ({ ...prev, selectedProducts: '' }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (validate()) {
+        if (!validate()) {
+            setFormStatus({ type: 'error', message: 'Please fix the errors below.' });
+            return;
+        }
+
+        const payload = {
+            Name: formData.user_name.trim(),
+            Email: formData.user_email.trim(),
+            Phone: formData.user_phone.trim(),
+            Products: formData.selectedProducts.join(', '),
+            Message: formData.project_details.trim(),
+        };
+
+        setIsSubmitting(true);
+        setFormStatus({ type: '', message: '' });
+
+        const result = await submitInquiry(payload);
+
+        setIsSubmitting(false);
+
+        if (result.success) {
             setFormStatus({ type: 'success', message: 'Inquiry sent successfully! We will contact you soon.' });
             setTimeout(() => {
                 onClose();
             }, 2500);
         } else {
-            setFormStatus({ type: 'error', message: 'Please fix the errors below.' });
+            setFormStatus({ type: 'error', message: result.error });
+            generateCaptcha();
         }
     };
 
@@ -211,15 +234,13 @@ const InquiryForm = ({ isOpen, onClose, currentPage }) => {
                                             <div
                                                 key={product}
                                                 onClick={() => handleProductToggle(product)}
-                                                className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-all duration-200 select-none ${
-                                                    isSelected 
-                                                        ? 'bg-green-50 border-brand-primary ring-1 ring-brand-primary/20' 
-                                                        : 'bg-gray-50 border-gray-100 hover:border-brand-primary/30 hover:bg-white shadow-sm'
-                                                }`}
+                                                className={`flex items-center gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-all duration-200 select-none ${isSelected
+                                                    ? 'bg-green-50 border-brand-primary ring-1 ring-brand-primary/20'
+                                                    : 'bg-gray-50 border-gray-100 hover:border-brand-primary/30 hover:bg-white shadow-sm'
+                                                    }`}
                                             >
-                                                <div className={`w-5 h-5 rounded flex items-center justify-center transition-colors ${
-                                                    isSelected ? 'bg-brand-primary' : 'border-2 border-gray-300 bg-white'
-                                                }`}>
+                                                <div className={`w-5 h-5 rounded flex items-center justify-center transition-colors ${isSelected ? 'bg-brand-primary' : 'border-2 border-gray-300 bg-white'
+                                                    }`}>
                                                     {isSelected && <i className="fa-solid fa-check text-white text-[10px]"></i>}
                                                 </div>
                                                 <span className={`text-sm font-medium ${isSelected ? 'text-brand-dark' : 'text-gray-600'}`}>
@@ -268,8 +289,9 @@ const InquiryForm = ({ isOpen, onClose, currentPage }) => {
                             </div>
                         )}
                         <button type="submit" form="inquiryForm" id="submitBtn"
+                            disabled={isSubmitting}
                             className="w-full bg-brand-primary text-white py-3 rounded font-semibold hover:bg-green-700 transition shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed">
-                            Send Enquiry
+                            {isSubmitting ? 'Sending...' : 'Send Enquiry'}
                         </button>
                     </div>
                 </div>
