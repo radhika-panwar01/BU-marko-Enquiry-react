@@ -394,9 +394,9 @@ const HumanResourceAppPage = ({ onOpenInquiry, setCurrentPage }) => {
 
             <PricingSection
                 onOpenInquiry={onOpenInquiry}
-                plans={PRICING_DATA['hr-app']}
-                title="Flexible Pricing for HR App"
-                subtitle="Choose the right plan to manage your workforce and streamline HR operations."
+                plans={PRICING_DATA['hr-pulse']}
+                title="Preços Flexíveis para HR-Pulse"
+                subtitle="Do processamento manual ao totalmente automatizado com IA — escolha o plano certo para a sua equipa."
             />
 
             {/* CTA */}

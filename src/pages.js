@@ -8,6 +8,7 @@ import TourGuideAppPage from './components/Product_subpages/Tour-Guide-App';
 import DriverAppPage from './components/Product_subpages/Driver-App';
 import HumanResourceAppPage from './components/Product_subpages/Human-Resource-App';
 import ContractManagementPage from './components/Product_subpages/Contract-Management';
+import InboxMasterPage from './components/Product_subpages/InboxMaster';
 
 /*
   Page registry — single source of truth for every page in the app.
@@ -27,8 +28,9 @@ export const PAGES = {
     'product-operations-logistics':  { key: 'product-operations-logistics',    label: 'Fleet & Operations',                   Component: OperationsLogisticsPage,       inProductMenu: true,  icon: 'fa-solid fa-truck-fast' },
     'product-tour-guide-app':        { key: 'product-tour-guide-app',          label: 'Tour Guide App',                       Component: TourGuideAppPage,              inProductMenu: true,  icon: 'fa-solid fa-map-location-dot' },
     'product-driver-app':            { key: 'product-driver-app',              label: 'Driver App',                           Component: DriverAppPage,                 inProductMenu: true,  icon: 'fa-solid fa-id-card-clip' },
-    'product-hr-app':                { key: 'product-hr-app',                  label: 'Human Resource App',                   Component: HumanResourceAppPage,          inProductMenu: true,  icon: 'fa-solid fa-users-gear' },
+    'product-hr-app':                { key: 'product-hr-app',                  label: 'HR-Pulse (Recursos Humanos)',          Component: HumanResourceAppPage,          inProductMenu: true,  icon: 'fa-solid fa-users-gear' },
     'product-contract-management':   { key: 'product-contract-management',     label: 'Contract Management',                  Component: ContractManagementPage,        inProductMenu: true,  icon: 'fa-solid fa-file-signature' },
+    'product-inbox-master':          { key: 'product-inbox-master',            label: 'InboxMaster',                          Component: InboxMasterPage,               inProductMenu: true,  icon: 'fa-solid fa-inbox' },
 };
 
 export const productMenuPages = Object.values(PAGES).filter(p => p.inProductMenu && p.key !== 'product');
