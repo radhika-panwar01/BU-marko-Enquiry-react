@@ -9,6 +9,7 @@ import DriverAppPage from './components/Product_subpages/Driver-App';
 import HumanResourceAppPage from './components/Product_subpages/Human-Resource-App';
 import ContractManagementPage from './components/Product_subpages/Contract-Management';
 import InboxMasterPage from './components/Product_subpages/InboxMaster';
+import LinkTripPage from './components/Product_subpages/LinkTrip';
 
 /*
   Page registry — single source of truth for every page in the app.
@@ -31,6 +32,7 @@ export const PAGES = {
     'product-hr-app':                { key: 'product-hr-app',                  label: 'HR-Pulse (Recursos Humanos)',          Component: HumanResourceAppPage,          inProductMenu: true,  icon: 'fa-solid fa-users-gear' },
     'product-contract-management':   { key: 'product-contract-management',     label: 'Contract Management',                  Component: ContractManagementPage,        inProductMenu: true,  icon: 'fa-solid fa-file-signature' },
     'product-inbox-master':          { key: 'product-inbox-master',            label: 'InboxMaster',                          Component: InboxMasterPage,               inProductMenu: true,  icon: 'fa-solid fa-inbox' },
+    'product-link-trip':             { key: 'product-link-trip',               label: 'BU LinkTrip',                          Component: LinkTripPage,                  inProductMenu: true,  icon: 'fa-solid fa-link' },
 };
 
 export const productMenuPages = Object.values(PAGES).filter(p => p.inProductMenu && p.key !== 'product');
@@ -58,6 +60,7 @@ export const isValidPage = (key) => Boolean(PAGES[key]);
              <Route path="/product/driver-app"            element={<DriverAppPage />} />
              <Route path="/product/hr-app"                element={<HumanResourceAppPage />} />
              <Route path="/product/contract-management"   element={<ContractManagementPage />} />
+             <Route path="/product/link-trip"              element={<LinkTripPage />} />
              <Route path="*"                              element={<Navigate to="/" replace />} />
            </Routes>
            <Footer />
