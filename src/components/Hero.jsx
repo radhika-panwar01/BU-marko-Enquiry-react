@@ -220,29 +220,31 @@ const Hero = ({ onOpenInquiry, setScrollTarget }) => {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 text-sm font-medium"
                  style={{ background: '#EEF2FF', color: '#4F46E5', border: '1px solid #C7D2FE' }}>
               <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#10B981' }}></span>
-              Trusted by 500+ enterprises worldwide
+              Trusted by 300+ travel & hospitality businesses
             </div>
 
             {/* Headline */}
-            <h1 className="leading-[1.08] tracking-tight mb-6"
+            <h1 className="leading-[1.1] tracking-tight mb-5"
                 style={{
                   fontFamily: '"Plus Jakarta Sans", Inter, sans-serif',
-                  fontSize: 'clamp(2.2rem, 4.8vw, 3.6rem)',
+                  fontSize: 'clamp(1.6rem, 3.4vw, 2.6rem)',
                   fontWeight: 800,
                   color: '#0F172A',
                 }}>
-              Power your entire{' '}
-              <span className="gradient-text">enterprise</span>
+              The complete software suite{' '}
               <br className="hidden sm:block" />
-              {' '}on{' '}
-              <span className="gradient-text">one platform.</span>
+              for{' '}
+              <span className="gradient-text">travel & hospitality</span>
+              <br className="hidden sm:block" />
+              {' '}
+              <span className="gradient-text">businesses.</span>
             </h1>
 
             {/* Subtext */}
-            <p className="text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
+            <p className="text-base leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
                style={{ color: '#64748B' }}>
-              CRM, ERP, HRMS, Helpdesk, Analytics, and AI Automation —
-              unified into a single intelligent platform built for scale.
+              Hotel Booking, Travel Management, Fleet Operations, HR, Accounting,
+              and more — purpose-built software that runs your entire business from one place.
             </p>
 
             {/* CTAs */}
@@ -276,7 +278,7 @@ const Hero = ({ onOpenInquiry, setScrollTarget }) => {
                 ))}
               </div>
               <p className="text-sm" style={{ color: '#94A3B8' }}>
-                <span className="font-semibold" style={{ color: '#0F172A' }}>500+</span> companies onboarded this year
+                <span className="font-semibold" style={{ color: '#0F172A' }}>300+</span> businesses onboarded this year
               </p>
             </div>
           </div>

@@ -44,10 +44,10 @@ const AnimatedNumber = ({ target, prefix = '', suffix = '', decimals = 0 }) => {
 };
 
 const statsData = [
-  { target: 500,  suffix: '+',  decimals: 0, label: 'Companies powered',      icon: 'fa-building'      },
-  { target: 2.5,  suffix: 'M+', decimals: 1, label: 'Workflows automated',    icon: 'fa-circle-nodes'  },
-  { target: 99.9, suffix: '%',  decimals: 1, label: 'Uptime SLA',             icon: 'fa-shield-halved' },
-  { target: 40,   suffix: '+',  decimals: 0, label: 'Integrations available', icon: 'fa-plug'          },
+  { target: 300,  suffix: '+',  decimals: 0, label: 'Businesses powered globally', icon: 'fa-building'      },
+  { target: 1.8,  suffix: 'M+', decimals: 1, label: 'Bookings managed annually',   icon: 'fa-calendar-check'},
+  { target: 99.9, suffix: '%',  decimals: 1, label: 'Platform uptime SLA',          icon: 'fa-shield-halved' },
+  { target: 8,    suffix: '',   decimals: 0, label: 'Integrated software modules',  icon: 'fa-cubes'         },
 ];
 
 /* ─────────────────────────────────────────────
@@ -367,11 +367,11 @@ function App() {
             <div className="px-4 sm:px-6 lg:px-10 text-center">
               <p className="text-xs font-semibold uppercase tracking-widest mb-7"
                  style={{ color: '#94A3B8', letterSpacing: '0.15em' }}>
-                Trusted by leading enterprises &amp; software teams
+                Trusted by leading travel, hospitality &amp; operations businesses
               </p>
               <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-5"
                    data-aos="fade-up" data-aos-duration="600">
-                {['CloudStack', 'Nexify', 'DataPilot', 'BuildCore', 'OmniFlow', 'TechVentures'].map(name => (
+                {['Voyager Travel', 'CoralResorts', 'SkyRoute DMC', 'AlpineTours', 'MedFleet', 'AquaHotels'].map(name => (
                   <span key={name} className="proof-logo text-lg font-bold" style={{ letterSpacing: '-0.02em' }}>
                     {name}
                   </span>
@@ -385,40 +385,40 @@ function App() {
                    data-aos="fade-up" data-aos-duration="700">
             <div className="mx-3 px-4 md:px-14">
               <div className="text-center mb-16">
-                <SectionTag label="The problem" />
+                <SectionTag label="The challenge" />
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                  Running a business shouldn't mean<br className="hidden sm:block" /> managing a dozen disconnected tools.
+                  Running a travel business shouldn't mean<br className="hidden sm:block" /> juggling ten different systems.
                 </h2>
                 <p className="mt-4 max-w-xl mx-auto" style={{ color: '#64748B' }}>
-                  Most teams still rely on spreadsheets, legacy software, and siloed data.
-                  Bu Marka brings every part of your operation together.
+                  Most travel & hospitality teams still rely on spreadsheets, legacy PMS tools, and disconnected apps.
+                  Bu Marka replaces the chaos with one unified platform.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   {
-                    pain:     'Fragmented software ecosystem',
-                    painDesc: 'Finance uses one tool, HR another, support a third. Data lives in silos, integrations break, and nothing gives you the full picture.',
-                    fix:      'One unified platform',
-                    fixDesc:  'CRM, ERP, HRMS, Helpdesk, and Analytics all share the same data layer — no more copy-pasting between systems.',
+                    pain:     'Scattered booking & operations tools',
+                    painDesc: 'Your reservations live in one system, fleet in another, finance in a spreadsheet. Nothing talks to each other and your team wastes hours bridging the gaps.',
+                    fix:      'One connected operations hub',
+                    fixDesc:  'Hotel Booking, Travel Management, Fleet, HR, and Accounting all share a single data layer — updates flow instantly across every module.',
                     icon:     'fa-puzzle-piece',
                     color:    '#6366F1',
                   },
                   {
-                    pain:     'Manual, error-prone processes',
-                    painDesc: 'Teams waste hours on repetitive data entry, approvals via email, and manual report generation every single week.',
-                    fix:      'Intelligent automation',
-                    fixDesc:  'Automate approvals, notifications, reports, and cross-system data sync. Let your team focus on work that matters.',
-                    icon:     'fa-gears',
+                    pain:     'Manual invoicing & financial chaos',
+                    painDesc: 'Billing clients, reconciling supplier payments, and generating financial reports eats up days every month — with costly errors slipping through.',
+                    fix:      'Automated finance & accounting',
+                    fixDesc:  'Auto-generate invoices, track supplier costs, reconcile payments, and produce real-time P&L reports — all without touching a spreadsheet.',
+                    icon:     'fa-file-invoice',
                     color:    '#8B5CF6',
                   },
                   {
-                    pain:     'No real-time visibility',
-                    painDesc: 'Management makes decisions on yesterday\'s data. Dashboards are static, reports take hours, anomalies go undetected.',
-                    fix:      'Live dashboards & insights',
-                    fixDesc:  'Real-time KPIs across every module — revenue, pipeline, headcount, tickets — so you always know what\'s happening.',
+                    pain:     'Zero visibility across properties & fleets',
+                    painDesc: 'Managers make decisions based on yesterday\'s data. Vehicle locations, room occupancy, and staff attendance are always one step behind.',
+                    fix:      'Live dashboards across every operation',
+                    fixDesc:  'Real-time occupancy rates, fleet positions, booking volumes, and staff attendance — all on one screen so you always know what\'s happening right now.',
                     icon:     'fa-chart-pie',
                     color:    '#10B981',
                   },
@@ -459,13 +459,13 @@ function App() {
           <section id="products" className="py-24" style={{ background: '#F9FAFB' }}>
             <div className="mx-3 px-4 md:px-14">
               <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="600">
-                <SectionTag label="Software Solutions" />
+                <SectionTag label="Our Software Suite" />
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                  Eight products. One connected platform.
+                  Eight purpose-built products.<br className="hidden sm:block" /> One connected platform.
                 </h2>
                 <p className="mt-4 max-w-xl mx-auto" style={{ color: '#64748B' }}>
-                  Every team in your organisation gets a purpose-built tool that shares a single source of truth.
+                  Every department in your business gets software designed specifically for how they work — all sharing the same real-time data.
                 </p>
               </div>
 
@@ -517,13 +517,13 @@ function App() {
           <section id="features" className="py-24" style={{ background: '#FFFFFF' }}>
             <div className="mx-3 px-4 md:px-14">
               <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="600">
-                <SectionTag label="Features" />
+                <SectionTag label="Key Features" />
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                  Everything your business needs
+                  Powerful features built for<br className="hidden sm:block" /> the way you operate
                 </h2>
                 <p className="mt-4 max-w-xl mx-auto" style={{ color: '#64748B' }}>
-                  One platform. No more duct-taped integrations.
+                  Explore the capabilities inside each product — purpose-designed for travel, hospitality, and operations teams.
                 </p>
               </div>
 
@@ -572,7 +572,7 @@ function App() {
               <div className="text-center mb-14" data-aos="fade-up" data-aos-duration="600">
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif' }}>
-                  The numbers speak for themselves
+                  Real results from real businesses
                 </h2>
               </div>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center"
@@ -600,10 +600,10 @@ function App() {
                 <SectionTag label="How it works" />
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                  Up and running in under a day
+                  From sign-up to fully operational<br className="hidden sm:block" /> in under a day
                 </h2>
                 <p className="mt-4 max-w-md mx-auto" style={{ color: '#64748B' }}>
-                  No developer needed. No painful data migrations.
+                  No developers, no lengthy onboarding, no disruption to your current operations.
                 </p>
               </div>
 
@@ -614,20 +614,20 @@ function App() {
                 {[
                   {
                     n: '01',
-                    title: 'Import your data',
-                    desc:  'Connect your existing systems or import CSVs. Bu Marka maps your contacts, records, and history automatically — no manual re-entry.',
+                    title: 'Migrate your data instantly',
+                    desc:  'Import your existing bookings, guest records, fleet data, and employee profiles in minutes. Our onboarding team maps everything for you — zero manual re-entry.',
                     icon:  'fa-file-arrow-up',
                   },
                   {
                     n: '02',
-                    title: 'Configure your workflows',
-                    desc:  'Set up automations, approval chains, SLA rules, and role-based access in minutes using our no-code workflow builder.',
-                    icon:  'fa-gears',
+                    title: 'Configure your modules',
+                    desc:  'Activate only the products your business needs. Set up automations, approval workflows, user roles, and SLA rules using our no-code builder — no IT team required.',
+                    icon:  'fa-sliders',
                   },
                   {
                     n: '03',
-                    title: 'Scale with live insights',
-                    desc:  'Real-time dashboards surface KPIs across CRM, ERP, HR, and support — so every team always knows what\'s happening.',
+                    title: 'Operate & grow with confidence',
+                    desc:  'Live dashboards give every department — from reservations to finance — instant visibility so decisions are always based on accurate, real-time data.',
                     icon:  'fa-chart-line',
                   },
                 ].map((step, i) => (
@@ -659,32 +659,32 @@ function App() {
                 <SectionTag label="Pricing" />
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                  Simple, transparent pricing
+                  Flexible plans for every<br className="hidden sm:block" /> stage of your business
                 </h2>
                 <p className="mt-4 max-w-md mx-auto" style={{ color: '#64748B' }}>
-                  Start free. Scale as you grow. Cancel anytime.
+                  Start with what you need. Add modules as you grow. No hidden fees, no lock-in contracts.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 {[
                   {
-                    name: 'Starter', price: '£29', period: '/mo',
-                    tagline: 'For small teams getting started', members: 'Up to 5 users',
+                    name: 'Starter', price: '£49', period: '/mo',
+                    tagline: 'For small travel & hospitality businesses', members: 'Up to 5 users',
                     featured: false, cta: 'Start free trial',
-                    perks: ['CRM & pipeline management', 'Helpdesk & ticketing', 'Basic analytics dashboard', 'Email & chat support'],
+                    perks: ['Hotel & Booking module', 'InboxMaster support desk', 'Basic reporting dashboard', 'Email & chat support'],
                   },
                   {
-                    name: 'Growth', price: '£99', period: '/mo',
-                    tagline: 'For scaling businesses', members: 'Up to 25 users',
+                    name: 'Growth', price: '£129', period: '/mo',
+                    tagline: 'For growing operations teams', members: 'Up to 25 users',
                     featured: true, cta: 'Start free trial', badge: 'Most popular',
-                    perks: ['Everything in Starter', 'ERP & HRMS modules', 'Project management', 'AI automation workflows', 'Priority support'],
+                    perks: ['Everything in Starter', 'Travel Management & Fleet', 'HR-Pulse & Accounting', 'Workflow automation', 'Priority support & onboarding'],
                   },
                   {
                     name: 'Enterprise', price: 'Custom', period: '',
-                    tagline: 'For large organisations', members: 'Unlimited users',
+                    tagline: 'For large multi-property organisations', members: 'Unlimited users',
                     featured: false, cta: 'Talk to sales',
-                    perks: ['Everything in Growth', 'Custom software development', 'Dedicated account manager', 'SLA & uptime guarantee', 'On-boarding & training'],
+                    perks: ['All 8 software modules', 'Custom integrations & API access', 'Dedicated account manager', '99.9% uptime SLA guarantee', 'White-glove onboarding & training'],
                   },
                 ].map((plan, i) => (
                   <div key={i}
@@ -756,34 +756,34 @@ function App() {
                 <SectionTag label="Testimonials" />
                 <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                     style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                  Loved by enterprise teams worldwide
+                  Trusted by travel & hospitality<br className="hidden sm:block" /> teams across the globe
                 </h2>
               </div>
 
               <div className="grid md:grid-cols-3 gap-6">
                 {[
                   {
-                    quote:   '"Bu Marka replaced five disconnected tools overnight. Our sales team went from updating three CRMs to one unified pipeline, and deal close time dropped by 38% in the first quarter."',
-                    name:    'James Okafor',
-                    role:    'VP of Sales',
-                    org:     'Nexify Corp.',
-                    initials:'JO',
+                    quote:   '"Bu Marka transformed how we manage our hotel portfolio. Reservations, housekeeping schedules, and guest billing now flow through one system. Our front-desk team saves 3+ hours every single day."',
+                    name:    'Karim El-Masri',
+                    role:    'General Manager',
+                    org:     'AquaHotels Group',
+                    initials:'KE',
                     color:   '#6366F1',
                   },
                   {
-                    quote:   '"The ERP module alone saved us 20+ hours a week in manual reconciliation. Finance, procurement, and ops now all work from the same real-time data — it\'s genuinely transformative."',
-                    name:    'Priya Nair',
-                    role:    'COO',
-                    org:     'CloudStack Ltd.',
-                    initials:'PN',
+                    quote:   '"We run 40+ tour packages a month across three countries. Bu Marka\'s Travel Management and Tour Guide App gave us full visibility for the first time. Missed pickups dropped to zero in month one."',
+                    name:    'Sofia Andrade',
+                    role:    'Operations Director',
+                    org:     'Voyager Travel DMC',
+                    initials:'SA',
                     color:   '#10B981',
                   },
                   {
-                    quote:   '"We onboarded 120 employees using Bu Marka HRMS. Payroll that used to take two days now runs in under an hour. The support team is world-class — genuinely impressive product."',
-                    name:    'Tobias Richter',
-                    role:    'Head of People',
-                    org:     'DataPilot Inc.',
-                    initials:'TR',
+                    quote:   '"Fleet scheduling used to be a daily nightmare. With Bu Marka\'s Fleet module and Driver App, our dispatcher manages 60 vehicles from a single dashboard. Fuel costs dropped 18% in the first quarter."',
+                    name:    'Yusuf Al-Rashid',
+                    role:    'Head of Fleet Operations',
+                    org:     'MedFleet Services',
+                    initials:'YR',
                     color:   '#8B5CF6',
                   },
                 ].map((t, i) => (
@@ -822,10 +822,10 @@ function App() {
                   <SectionTag label="Resources" />
                   <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight"
                       style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-                    Insights for modern<br className="hidden sm:block" /> enterprise teams
+                    Insights for travel & hospitality operators
                   </h2>
                   <p className="mt-3 text-sm" style={{ color: '#64748B' }}>
-                    Guides, playbooks, and updates to help your team scale smarter.
+                    Practical guides, software playbooks, and industry updates to help your business run better.
                   </p>
                 </div>
                 <button className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold"
@@ -836,7 +836,7 @@ function App() {
 
               {/* Category pill filter */}
               <div className="flex flex-wrap gap-2 mb-10">
-                {['All', 'CRM', 'ERP', 'HRMS', 'AI & Automation', 'Product Updates'].map((f, i) => (
+                {['All', 'Hotel Tech', 'Travel Ops', 'Fleet & Logistics', 'HR & People', 'Product Updates'].map((f, i) => (
                   <span key={i}
                         className="px-4 py-1.5 rounded-full text-xs font-semibold cursor-pointer select-none"
                         style={i === 0
@@ -869,8 +869,8 @@ function App() {
                       <div className="w-full max-w-sm rounded-xl p-4"
                            style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.14)', backdropFilter: 'blur(8px)' }}>
                         <div className="flex items-center justify-between mb-3">
-                          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>Pipeline · Q2 2025</span>
-                          <span style={{ fontSize: 10, background: 'rgba(16,185,129,0.25)', color: '#6EE7B7', padding: '2px 8px', borderRadius: 20, fontWeight: 600 }}>↑ +35% closed</span>
+                          <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', fontWeight: 600 }}>Bookings · Q2 2025</span>
+                          <span style={{ fontSize: 10, background: 'rgba(16,185,129,0.25)', color: '#6EE7B7', padding: '2px 8px', borderRadius: 20, fontWeight: 600 }}>↑ +35% occupancy</span>
                         </div>
                         <div className="flex gap-1.5 items-end" style={{ height: 48 }}>
                           {[30, 45, 38, 60, 52, 72, 58, 85, 70, 95].map((h, j) => (
@@ -879,7 +879,7 @@ function App() {
                           ))}
                         </div>
                         <div className="flex gap-2 mt-3">
-                          {['Lead', 'Proposal', 'Closing', 'Won'].map((s, k) => (
+                          {['Inquiry', 'Quoted', 'Confirmed', 'Checked-In'].map((s, k) => (
                             <div key={k} className="flex-1 rounded py-1 text-center" style={{ fontSize: 9, color: 'rgba(255,255,255,0.55)', background: 'rgba(255,255,255,0.08)' }}>{s}</div>
                           ))}
                         </div>
@@ -901,7 +901,7 @@ function App() {
                   <div className="p-6 flex flex-col flex-1">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="px-2.5 py-1 rounded-full text-[11px] font-semibold"
-                            style={{ background: '#EEF2FF', color: '#4F46E5' }}>CRM</span>
+                            style={{ background: '#EEF2FF', color: '#4F46E5' }}>Hotel Tech</span>
                       <span className="text-[11px] flex items-center gap-1" style={{ color: '#94A3B8' }}>
                         <i className="fa-regular fa-clock text-[10px]"></i> 5 min read
                       </span>
@@ -909,19 +909,19 @@ function App() {
                     </div>
                     <h3 className="font-extrabold leading-snug mb-2 group-hover:text-[#6366F1] transition-colors"
                         style={{ fontSize: 18, color: '#0F172A', fontFamily: '"Plus Jakarta Sans", Inter, sans-serif' }}>
-                      How to cut your sales cycle by 35% with CRM automation
+                      How modern hotel software cuts check-in time by 60% and boosts guest satisfaction
                     </h3>
                     <p className="text-sm leading-relaxed flex-1" style={{ color: '#64748B' }}>
-                      Stop losing deals to slow follow-ups. Learn how automation sequences keep your pipeline moving without manual effort — from first touch to close.
+                      Front-desk bottlenecks cost hotels revenue and reviews. Discover how automated check-in flows, real-time room availability, and guest profile management eliminate the friction entirely.
                     </p>
                     <div className="mt-5 pt-4 flex items-center justify-between"
                          style={{ borderTop: '1px solid #F1F5F9' }}>
                       <div className="flex items-center gap-2.5">
                         <div className="w-7 h-7 rounded-full flex items-center justify-center text-white text-[10px] font-bold"
-                             style={{ background: '#6366F1' }}>JO</div>
+                             style={{ background: '#6366F1' }}>KE</div>
                         <div>
-                          <div className="text-xs font-semibold" style={{ color: '#0F172A' }}>James Okafor</div>
-                          <div className="text-[10px]" style={{ color: '#94A3B8' }}>VP Sales · Nexify</div>
+                          <div className="text-xs font-semibold" style={{ color: '#0F172A' }}>Karim El-Masri</div>
+                          <div className="text-[10px]" style={{ color: '#94A3B8' }}>GM · AquaHotels Group</div>
                         </div>
                       </div>
                       <span className="inline-flex items-center gap-1.5 text-sm font-semibold" style={{ color: '#6366F1' }}>
@@ -938,25 +938,25 @@ function App() {
                       gradient: 'linear-gradient(135deg, #064E3B 0%, #059669 50%, #10B981 100%)',
                       glowColor: 'rgba(16,185,129,0.4)',
                       icon: 'fa-sitemap', iconBg: 'rgba(255,255,255,0.15)',
-                      metrics: [{ label: 'Inventory accuracy', value: '99.2%' }, { label: 'PO cycle time', value: '↓ 4hrs' }],
-                      category: 'ERP', catBg: '#F0FDF4', catColor: '#059669',
+                      metrics: [{ label: 'On-time departures', value: '98.4%' }, { label: 'Cost per trip', value: '↓ 22%' }],
+                      category: 'Travel Ops', catBg: '#F0FDF4', catColor: '#059669',
                       type: 'Playbook',
-                      title: '5 ERP best practices every scaling business needs',
-                      excerpt: 'From real-time inventory to automated procurement — the complete playbook for modernising operations.',
+                      title: 'The complete guide to digitising your travel agency operations in 2025',
+                      excerpt: 'From itinerary management to supplier contracts — the step-by-step playbook for moving off spreadsheets.',
                       readTime: '7 min', date: 'May 18',
-                      author: 'PN', authorName: 'Priya Nair', authorColor: '#10B981',
+                      author: 'SA', authorName: 'Sofia Andrade', authorColor: '#10B981',
                     },
                     {
                       gradient: 'linear-gradient(135deg, #78350F 0%, #D97706 50%, #F59E0B 100%)',
                       glowColor: 'rgba(245,158,11,0.4)',
                       icon: 'fa-users-gear', iconBg: 'rgba(255,255,255,0.15)',
-                      metrics: [{ label: 'Payroll time saved', value: '22 hrs' }, { label: 'Onboarding NPS', value: '4.9★' }],
-                      category: 'HRMS', catBg: '#FFFBEB', catColor: '#D97706',
-                      type: 'Tutorial',
-                      title: 'The complete HRMS implementation guide for 2025',
-                      excerpt: 'Move from spreadsheet chaos to automated payroll and onboarding without disrupting your team.',
+                      metrics: [{ label: 'Vehicles tracked', value: '60+' }, { label: 'Fuel savings', value: '↓ 18%' }],
+                      category: 'Fleet & Logistics', catBg: '#FFFBEB', catColor: '#D97706',
+                      type: 'Case Study',
+                      title: 'How MedFleet cut fuel costs by 18% with real-time fleet management software',
+                      excerpt: 'Managing 60 vehicles across multiple cities was a logistical nightmare. One platform changed everything.',
                       readTime: '6 min', date: 'May 12',
-                      author: 'TR', authorName: 'Tobias Richter', authorColor: '#8B5CF6',
+                      author: 'YR', authorName: 'Yusuf Al-Rashid', authorColor: '#8B5CF6',
                     },
                   ].map((post, i) => (
                     <div key={i} className="group cursor-pointer rounded-2xl overflow-hidden flex flex-col flex-1"
@@ -1047,7 +1047,7 @@ function App() {
                     </div>
                     <h4 className="font-bold leading-snug mb-1 group-hover:text-[#6366F1] transition-colors"
                         style={{ fontSize: 13, color: '#0F172A' }}>
-                      How BuildCore automated 80% of their approval workflows
+                      How AlpineTours automated 80% of their booking confirmations with zero code
                     </h4>
                     <div className="mt-3 text-[10px] font-semibold flex items-center gap-1" style={{ color: '#6366F1' }}>
                       Read case study <i className="fa-solid fa-arrow-right text-[9px]"></i>
@@ -1080,7 +1080,7 @@ function App() {
                     </div>
                     <h4 className="font-bold leading-snug mb-1 group-hover:text-[#6366F1] transition-colors"
                         style={{ fontSize: 13, color: '#0F172A' }}>
-                      The enterprise SaaS analytics benchmark report — 2025 edition
+                      Travel & hospitality software benchmark report — 2025 edition
                     </h4>
                     <div className="mt-3 text-[10px] font-semibold flex items-center gap-1" style={{ color: '#6366F1' }}>
                       Download report <i className="fa-solid fa-arrow-right text-[9px]"></i>
@@ -1099,10 +1099,10 @@ function App() {
                     </div>
                     <div className="font-extrabold mb-1"
                          style={{ fontSize: 15, color: '#0F172A', fontFamily: '"Plus Jakarta Sans", sans-serif' }}>
-                      Weekly enterprise insights
+                      Weekly travel tech insights
                     </div>
                     <p className="text-xs leading-relaxed mb-4" style={{ color: '#64748B' }}>
-                      SaaS strategy, product updates, and best practices. No spam — unsubscribe anytime.
+                      Software guides, hospitality trends, and product updates. No spam — unsubscribe anytime.
                     </p>
                   </div>
                   <div className="flex flex-col gap-2">
@@ -1125,11 +1125,11 @@ function App() {
               <SectionTag label="Get started today" dark />
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white leading-tight mb-5"
                   style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif' }}>
-                Your competitive edge<br className="hidden sm:block" /> starts here.
+                Run your entire operation<br className="hidden sm:block" /> from one platform.
               </h2>
               <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.65)' }}>
-                Join 500+ enterprises already running on Bu Marka.
-                Free for 14 days — no card required.
+                Join 300+ travel & hospitality businesses already powered by Bu Marka.
+                Free for 14 days — no credit card, no commitment.
               </p>
 
               {ctaSent ? (
@@ -1155,7 +1155,7 @@ function App() {
               )}
 
               <p className="mt-4 text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                No credit card required · 14-day free trial · Cancel anytime
+                No credit card required · 14-day free trial · Cancel anytime · Full onboarding support included
               </p>
             </div>
           </section>
