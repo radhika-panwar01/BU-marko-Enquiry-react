@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import PricingSection from "../PricingSection";
 import { PRICING_DATA } from "../../pricingData";
 
@@ -15,7 +15,7 @@ const BrowserChrome = ({ url }) => (
         <div className="flex gap-1.5 sm:gap-2">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-indigo-400"></div>
         </div>
         {url && <div className="bg-white rounded-md px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-xs text-gray-400 border border-gray-100 font-mono truncate max-w-[60%]">{url}</div>}
         <div className="w-8 sm:w-12"></div>
@@ -26,8 +26,8 @@ const BrowserChrome = ({ url }) => (
 const TodayTourMockup = () => (
     <div className="bg-white">
         <MobileChrome />
-        <div className="p-3 sm:p-4 space-y-3 bg-gradient-to-b from-green-50 to-white">
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3 shadow-md">
+        <div className="p-3 sm:p-4 space-y-3 bg-gradient-to-b from-indigo-50 to-white">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3 shadow-md">
                 <p className="text-[9px] uppercase opacity-80 tracking-wider">Today's Tour</p>
                 <p className="text-sm font-bold mt-0.5">Heritage Walk · Old Town</p>
                 <div className="flex items-center justify-between mt-2 text-[9px]">
@@ -72,10 +72,10 @@ const GroupManagerMockup = () => (
                 <span className="text-[9px] px-2 py-0.5 bg-brand-light text-brand-primary rounded-full font-semibold">12 / 12</span>
             </div>
             {[
-                { n: "Sarah J.", st: "Checked in", c: "text-brand-primary bg-green-50" },
-                { n: "Marcus T.", st: "Checked in", c: "text-brand-primary bg-green-50" },
+                { n: "Sarah J.", st: "Checked in", c: "text-brand-primary bg-indigo-50" },
+                { n: "Marcus T.", st: "Checked in", c: "text-brand-primary bg-indigo-50" },
                 { n: "Priya K.", st: "Pending", c: "text-yellow-600 bg-yellow-50" },
-                { n: "Family Lee · 4", st: "Checked in", c: "text-brand-primary bg-green-50" },
+                { n: "Family Lee · 4", st: "Checked in", c: "text-brand-primary bg-indigo-50" },
             ].map((g, i) => (
                 <div key={i} className="rounded-lg border border-gray-100 bg-white p-2.5 flex items-center gap-2">
                     <div className="w-7 h-7 rounded-full bg-brand-light text-brand-primary flex items-center justify-center font-bold text-[10px]">
@@ -151,7 +151,7 @@ const PerformanceMockup = () => (
                 </div>
                 <div className="rounded-lg border border-gray-100 bg-white p-2.5">
                     <p className="text-[8px] text-gray-400 uppercase">Tips</p>
-                    <p className="text-base font-bold text-green-600">$1.4K</p>
+                    <p className="text-base font-bold text-indigo-600">$1.4K</p>
                 </div>
             </div>
             <div className="rounded-lg border border-gray-100 bg-white p-2.5">
@@ -179,7 +179,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
     return (
         <main className="pt-[60px] md:pt-20 bg-white font-sans overflow-hidden">
             {/* HERO */}
-            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-green-50/40 overflow-hidden border-b border-gray-100">
+            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-indigo-50/40 overflow-hidden border-b border-gray-100">
                 <div className="absolute top-0 right-0 w-[50%] h-full bg-brand-light pointer-events-none rounded-l-full blur-3xl opacity-60"></div>
                 <div className="mx-3 px-4 md:px-14 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -197,7 +197,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <span className="text-brand-dark font-semibold">Tour Guide App</span>
                             </nav>
 
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-map-location-dot text-[12px]"></i>
                                 Tour Guide App
                             </div>
@@ -208,13 +208,13 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 Schedules, group rosters, itinerary stops, and real-time updates — built so guides can focus on guests, not paperwork.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300">Request Demo</button>
+                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300">Request Demo</button>
                                 <button onClick={() => document.getElementById("core-features").scrollIntoView({ behavior: "smooth" })} className="bg-white text-brand-dark border border-gray-200 px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:border-brand-primary hover:text-brand-primary transition-all duration-300">Explore Features</button>
                             </div>
                         </div>
                         <div className="lg:w-1/2 w-full" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
                                 <div className="relative z-10 flex items-center justify-center gap-3 sm:gap-6">
                                     <div className="w-1/2 sm:w-1/3 relative group transform -translate-y-4">
                                         <div className="bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform -rotate-3 group-hover:rotate-0 transition-all duration-500">
@@ -250,7 +250,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { icon: "fa-solid fa-people-group", title: "Group Roster", desc: "Check-ins, dietary notes, and contact info for every guest in your group." },
                             { icon: "fa-solid fa-bell", title: "Real-time Updates", desc: "Instant notifications for changes, reassignments, and guest messages." },
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-light flex items-center justify-center text-xl sm:text-2xl text-brand-primary mb-5 sm:mb-6 group-hover:scale-110 transition-transform"><i className={item.icon}></i></div>
                                 <h3 className="font-bold text-lg sm:text-xl text-brand-dark mb-2 sm:mb-3 group-hover:text-brand-primary transition-colors">{item.title}</h3>
                                 <p className="text-brand-gray leading-relaxed font-light text-sm sm:text-base">{item.desc}</p>
@@ -276,7 +276,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                         </div>
                         <div className="lg:w-1/2 w-full flex justify-center" data-aos="fade-left">
                             <div className="relative max-w-[260px] sm:max-w-xs w-full">
-                                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
                                 <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden">
                                     <TodayTourMockup />
                                 </div>
@@ -357,7 +357,7 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { i: "fa-solid fa-bolt", v: "Fast", l: "One-tap actions" },
                             { i: "fa-solid fa-shield-halved", v: "Secure", l: "Encrypted data" },
                         ].map((s, i) => (
-                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
                                 <div className="w-10 h-10 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center mx-auto mb-3"><i className={s.i}></i></div>
                                 <h4 className="text-brand-primary font-bold text-base sm:text-xl mb-1">{s.v}</h4>
                                 <p className="text-brand-gray text-xs sm:text-sm">{s.l}</p>
@@ -375,13 +375,13 @@ const TourGuideAppPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-6 sm:space-y-8" data-aos="zoom-in">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-tight">Empower Your Guides. Delight Your Guests.</h2>
-                    <p className="text-base sm:text-xl text-green-50 font-light">Give your team the app that turns every tour into a five-star experience.</p>
+                    <p className="text-base sm:text-xl text-indigo-50 font-light">Give your team the app that turns every tour into a five-star experience.</p>
                     <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                         <button onClick={onOpenInquiry} className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1">Request Demo</button>
                     </div>

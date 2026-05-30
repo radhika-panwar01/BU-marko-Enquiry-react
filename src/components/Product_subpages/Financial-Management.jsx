@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import PricingSection from "../PricingSection";
 import { PRICING_DATA } from "../../pricingData";
 
@@ -8,7 +8,7 @@ const BrowserChrome = ({ url }) => (
         <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-red-400"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+            <div className="w-3 h-3 rounded-full bg-indigo-400"></div>
         </div>
         {url && (
             <div className="bg-white rounded-md px-3 py-1 text-[10px] md:text-xs text-gray-400 border border-gray-100 font-mono truncate max-w-[60%]">
@@ -37,7 +37,7 @@ const FinanceDashboardMockup = () => (
                 <div className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
                     <p className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Revenue</p>
                     <p className="text-base font-bold text-brand-dark mt-1">$184.2K</p>
-                    <p className="text-[10px] text-green-600 font-semibold mt-0.5">▲ 12.4%</p>
+                    <p className="text-[10px] text-indigo-600 font-semibold mt-0.5">▲ 12.4%</p>
                 </div>
                 <div className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
                     <p className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Expenses</p>
@@ -47,7 +47,7 @@ const FinanceDashboardMockup = () => (
                 <div className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
                     <p className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Net Profit</p>
                     <p className="text-base font-bold text-brand-primary mt-1">$121.4K</p>
-                    <p className="text-[10px] text-green-600 font-semibold mt-0.5">▲ 18.7%</p>
+                    <p className="text-[10px] text-indigo-600 font-semibold mt-0.5">▲ 18.7%</p>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@ const FinanceDashboardMockup = () => (
                 <div className="flex justify-between items-center mb-3">
                     <p className="text-xs font-bold text-brand-dark">Cash Flow Overview</p>
                     <div className="flex gap-1.5">
-                        <span className="text-[9px] px-2 py-0.5 bg-green-50 text-brand-primary rounded-full font-semibold">In</span>
+                        <span className="text-[9px] px-2 py-0.5 bg-indigo-50 text-brand-primary rounded-full font-semibold">In</span>
                         <span className="text-[9px] px-2 py-0.5 bg-gray-100 text-gray-500 rounded-full font-semibold">Out</span>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const FinanceDashboardMockup = () => (
                         { i: 90, o: 55 }, { i: 70, o: 45 }, { i: 95, o: 50 }, { i: 85, o: 38 },
                     ].map((b, idx) => (
                         <div key={idx} className="flex-1 flex items-end gap-0.5">
-                            <div className="flex-1 bg-gradient-to-t from-brand-primary to-green-300 rounded-sm" style={{ height: `${b.i}%` }}></div>
+                            <div className="flex-1 bg-gradient-to-t from-brand-primary to-indigo-300 rounded-sm" style={{ height: `${b.i}%` }}></div>
                             <div className="flex-1 bg-gray-200 rounded-sm" style={{ height: `${b.o}%` }}></div>
                         </div>
                     ))}
@@ -79,13 +79,13 @@ const FinanceDashboardMockup = () => (
                 <p className="text-xs font-bold text-brand-dark mb-3">Recent Transactions</p>
                 <div className="space-y-2">
                     {[
-                        { name: "Booking #B-2041 — Acme Co.", amt: "+$3,200", color: "text-green-600", icon: "fa-arrow-down" },
+                        { name: "Booking #B-2041 — Acme Co.", amt: "+$3,200", color: "text-indigo-600", icon: "fa-arrow-down" },
                         { name: "Vendor — AWS Hosting", amt: "-$420", color: "text-red-500", icon: "fa-arrow-up" },
-                        { name: "Booking #B-2040 — Globex", amt: "+$1,860", color: "text-green-600", icon: "fa-arrow-down" },
+                        { name: "Booking #B-2040 — Globex", amt: "+$1,860", color: "text-indigo-600", icon: "fa-arrow-down" },
                     ].map((t, i) => (
                         <div key={i} className="flex justify-between items-center text-[11px]">
                             <div className="flex items-center gap-2">
-                                <div className={`w-6 h-6 rounded-full flex items-center justify-center ${t.color === "text-green-600" ? "bg-green-50" : "bg-red-50"}`}>
+                                <div className={`w-6 h-6 rounded-full flex items-center justify-center ${t.color === "text-indigo-600" ? "bg-indigo-50" : "bg-red-50"}`}>
                                     <i className={`fa-solid ${t.icon} ${t.color} text-[9px]`}></i>
                                 </div>
                                 <span className="text-gray-600 font-medium">{t.name}</span>
@@ -103,8 +103,8 @@ const FinanceDashboardMockup = () => (
 const MobileWalletMockup = () => (
     <div className="bg-white">
         <MobileChrome />
-        <div className="p-4 space-y-3 bg-gradient-to-b from-green-50 to-white">
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3 shadow-md">
+        <div className="p-4 space-y-3 bg-gradient-to-b from-indigo-50 to-white">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3 shadow-md">
                 <p className="text-[9px] uppercase opacity-80 tracking-wider">Total Balance</p>
                 <p className="text-lg font-bold mt-0.5">$48,920</p>
                 <div className="flex justify-between mt-2 text-[9px]">
@@ -115,7 +115,7 @@ const MobileWalletMockup = () => (
             <div className="grid grid-cols-2 gap-2">
                 <div className="rounded-lg border border-gray-100 p-2 bg-white">
                     <p className="text-[8px] text-gray-400 uppercase">Income</p>
-                    <p className="text-xs font-bold text-green-600">$12.4K</p>
+                    <p className="text-xs font-bold text-indigo-600">$12.4K</p>
                 </div>
                 <div className="rounded-lg border border-gray-100 p-2 bg-white">
                     <p className="text-[8px] text-gray-400 uppercase">Spend</p>
@@ -153,7 +153,7 @@ const InvoiceMockup = () => (
                     <p className="text-[10px] uppercase tracking-wider text-gray-400 font-semibold">Invoice</p>
                     <p className="text-lg font-bold text-brand-dark">#INV-2041</p>
                 </div>
-                <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-green-50 text-brand-primary border border-green-100">PAID</span>
+                <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-indigo-50 text-brand-primary border border-indigo-100">PAID</span>
             </div>
             <div className="grid grid-cols-2 gap-3 mb-4 text-[10px]">
                 <div>
@@ -197,7 +197,7 @@ const InvoiceMockup = () => (
 const PaymentModalMockup = () => (
     <div className="bg-white">
         <BrowserChrome url="pay.bu-operations.com/B-2041" />
-        <div className="p-5 bg-gradient-to-br from-green-50/40 to-white">
+        <div className="p-5 bg-gradient-to-br from-indigo-50/40 to-white">
             <div className="rounded-2xl border border-gray-100 bg-white shadow-sm p-4 space-y-3">
                 <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center">
@@ -209,7 +209,7 @@ const PaymentModalMockup = () => (
                     </div>
                 </div>
 
-                <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3">
+                <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3">
                     <p className="text-[9px] uppercase opacity-80">Amount Due</p>
                     <p className="text-2xl font-bold">$3,200<span className="text-sm font-normal opacity-80">.00</span></p>
                 </div>
@@ -230,14 +230,14 @@ const PaymentModalMockup = () => (
                         { i: "fa-brands fa-paypal", l: "PayPal" },
                         { i: "fa-solid fa-building-columns", l: "Bank" },
                     ].map((m, i) => (
-                        <div key={i} className="rounded-lg border border-gray-100 py-1.5 flex flex-col items-center gap-0.5 hover:border-green-200 transition-colors">
+                        <div key={i} className="rounded-lg border border-gray-100 py-1.5 flex flex-col items-center gap-0.5 hover:border-indigo-200 transition-colors">
                             <i className={`${m.i} text-brand-dark`}></i>
                             <span className="text-[9px] text-gray-500">{m.l}</span>
                         </div>
                     ))}
                 </div>
 
-                <button className="w-full rounded-lg bg-brand-primary text-white font-bold text-xs py-2.5 hover:bg-green-700 transition-colors">
+                <button className="w-full rounded-lg bg-brand-primary text-white font-bold text-xs py-2.5 hover:bg-indigo-700 transition-colors">
                     Pay $3,200.00
                 </button>
                 <p className="text-[9px] text-center text-gray-400">256-bit SSL · PCI-DSS compliant</p>
@@ -253,13 +253,13 @@ const BillingAutomationMockup = () => (
         <div className="p-5 bg-white space-y-3">
             <div className="flex justify-between items-center">
                 <p className="text-xs font-bold text-brand-dark">Automated Billing</p>
-                <span className="text-[10px] px-2 py-0.5 bg-green-50 text-brand-primary rounded-full font-semibold flex items-center gap-1">
+                <span className="text-[10px] px-2 py-0.5 bg-indigo-50 text-brand-primary rounded-full font-semibold flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-primary animate-pulse"></span>
                     Live
                 </span>
             </div>
 
-            <div className="rounded-xl border border-gray-100 bg-gradient-to-br from-green-50/40 to-white p-3">
+            <div className="rounded-xl border border-gray-100 bg-gradient-to-br from-indigo-50/40 to-white p-3">
                 <p className="text-[10px] font-semibold text-gray-500 mb-2">Recurring Schedules</p>
                 {[
                     { n: "Acme Corp · Monthly", a: "$3,200", d: "May 18", s: "Sent" },
@@ -273,7 +273,7 @@ const BillingAutomationMockup = () => (
                         </div>
                         <div className="flex items-center gap-2">
                             <span className="font-bold text-brand-dark">{b.a}</span>
-                            <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${b.s === "Sent" ? "bg-green-50 text-brand-primary" : "bg-blue-50 text-blue-600"}`}>{b.s}</span>
+                            <span className={`text-[9px] px-1.5 py-0.5 rounded-full font-bold ${b.s === "Sent" ? "bg-indigo-50 text-brand-primary" : "bg-blue-50 text-blue-600"}`}>{b.s}</span>
                         </div>
                     </div>
                 ))}
@@ -310,7 +310,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
     return (
         <main className="pt-[60px] md:pt-20 bg-white font-sans overflow-hidden">
             {/* HERO */}
-            <section className="relative pt-20 pb-20 lg:pb-28 bg-gradient-to-b from-white to-green-50/40 overflow-hidden border-b border-gray-100">
+            <section className="relative pt-20 pb-20 lg:pb-28 bg-gradient-to-b from-white to-indigo-50/40 overflow-hidden border-b border-gray-100">
                 <div className="absolute top-0 right-0 w-[50%] h-[100%] bg-brand-light pointer-events-none rounded-l-full blur-3xl opacity-60"></div>
 
                 <div className="mx-3 px-4 md:px-14 relative z-10">
@@ -329,7 +329,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <span className="text-brand-dark font-semibold">Accounting (Travel)</span>
                             </nav>
 
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-calculator text-[12px]"></i>
                                 Accounting System for Travel
                             </div>
@@ -345,7 +345,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={onOpenInquiry}
-                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300"
+                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300"
                                 >
                                     Request Demo
                                 </button>
@@ -360,7 +360,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
 
                         <div className="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative perspective-1000">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
 
                                 <div className="relative z-10 flex items-center gap-6">
                                     <div className="w-2/3 relative group">
@@ -369,7 +369,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         </div>
 
                                         <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 animate-bounce" style={{ animationDuration: "3s" }}>
-                                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
+                                            <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary">
                                                 <i className="fa-solid fa-sack-dollar"></i>
                                             </div>
                                             <div>
@@ -419,7 +419,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                                className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
                                 data-aos="fade-up"
                                 data-aos-delay={i * 100}
                             >
@@ -462,7 +462,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 relative perspective-1000" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
 
                             <div className="relative z-10 flex items-center gap-6">
                                 <div className="w-2/3 relative group">
@@ -475,7 +475,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         <InvoiceMockup />
                                     </div>
                                     <div className="absolute -bottom-3 -right-3 bg-white p-2 rounded-lg shadow-lg border border-gray-100 flex items-center gap-1 z-20">
-                                        <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center text-brand-primary text-[9px]">
+                                        <div className="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary text-[9px]">
                                             <i className="fa-solid fa-check"></i>
                                         </div>
                                         <span className="text-[9px] font-bold text-brand-dark">Paid</span>
@@ -578,7 +578,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((p, i) => (
                             <div
                                 key={i}
-                                className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-green-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                                className="bg-white rounded-2xl border border-gray-100 p-6 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                                 data-aos="fade-up"
                                 data-aos-delay={i * 100}
                             >
@@ -611,7 +611,7 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((it, i) => (
                             <div
                                 key={i}
-                                className="flex items-center gap-3 p-4 rounded-xl bg-[#fafafa] border border-gray-100 hover:border-green-200 hover:bg-white hover:shadow-md transition-all duration-300"
+                                className="flex items-center gap-3 p-4 rounded-xl bg-[#fafafa] border border-gray-100 hover:border-indigo-200 hover:bg-white hover:shadow-md transition-all duration-300"
                                 data-aos="fade-up"
                                 data-aos-delay={(i % 4) * 100}
                             >
@@ -633,16 +633,16 @@ const FinancialManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
 
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-8" data-aos="zoom-in">
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
                         Take Control of Your Business Finances
                     </h2>
-                    <p className="text-xl text-green-50 font-light">
+                    <p className="text-xl text-indigo-50 font-light">
                         Automate your financial processes and focus on growing your business.
                     </p>
                     <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">

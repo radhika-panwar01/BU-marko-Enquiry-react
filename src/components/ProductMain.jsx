@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BRAND } from "../theme";
 import dashboard from "../assets/images/section4.png";
 import illustration from "../assets/images/pana.png";
 
@@ -16,12 +17,12 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
     return (
         <main className="pt-12 bg-[#fafafa] font-sans overflow-hidden">
             <section className="relative pt-20 pb-8 bg-white overflow-hidden border-b border-gray-100">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[100%] bg-gradient-to-b from-green-50/50 to-transparent pointer-events-none rounded-[100%] blur-3xl opacity-60"></div>
-                <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-primary rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
-                <div className="absolute top-24 -left-24 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[100%] bg-gradient-to-b from-indigo-50/50 to-transparent pointer-events-none rounded-[100%] blur-3xl opacity-60"></div>
+                <div className="absolute -top-24 -right-24 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+                <div className="absolute top-24 -left-24 w-72 h-72 bg-violet-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob" style={{ animationDelay: '2s' }}></div>
 
                 <div className="max-w-6xl mx-auto px-6 md:px-14 relative z-10 text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 text-brand-primary font-medium text-sm mb-8 border border-green-100 shadow-sm" data-aos="fade-down">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 text-brand-primary font-medium text-sm mb-8 border border-indigo-100 shadow-sm" data-aos="fade-down">
                         <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse"></span>
                         Next Generation Platform
                     </div>
@@ -37,7 +38,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                     <div className="flex flex-col sm:flex-row justify-center gap-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                         <button
                             onClick={onOpenInquiry}
-                            className="bg-brand-primary text-white px-6 py-3 rounded-xl font-medium text-md hover:bg-green-700 shadow-lg shadow-green-500/20 hover:shadow-green-500/40 transition-all duration-300"
+                            className="bg-brand-primary text-white px-6 py-3 rounded-xl font-medium text-md hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/40 transition-all duration-300"
                         >
                             Request Demo
                         </button>
@@ -70,7 +71,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                                     { title: "Financial tracking", desc: "Monitor payments, invoices, and expenses with real-time clarity." }
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-start gap-4">
-                                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-green-50 text-brand-primary flex items-center justify-center mt-1 border border-green-100">
+                                        <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-50 text-brand-primary flex items-center justify-center mt-1 border border-indigo-100">
                                             <i className="fa-solid fa-check text-sm"></i>
                                         </div>
                                         <div>
@@ -83,22 +84,156 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                         </div>
 
                         <div className="lg:w-7/12" data-aos="fade-left">
-                            <div className="relative rounded-3xl p-6 bg-white border border-gray-100 shadow-xl flex justify-center items-center">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-green-50 to-transparent rounded-3xl transform -rotate-1 opacity-60"></div>
-                                <img
-                                    src={illustration}
-                                    alt="Business Operations Illustration"
-                                    className="relative z-10 w-full max-w-lg object-contain hover:scale-105 transition-transform duration-500"
-                                />
-                                <div className="absolute -left-4 top-12 bg-white p-4 rounded-xl shadow-lg border border-gray-100 hidden md:flex items-center gap-4 animate-bounce" style={{ animationDuration: '3s' }}>
-                                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
-                                        <i className="fa-solid fa-bolt"></i>
+                            <div className="relative">
+
+                                {/* Glow backdrop */}
+                                <div className="absolute -inset-4 rounded-3xl opacity-30 blur-2xl" style={{ background: 'linear-gradient(135deg,#6366F1,#8B5CF6)' }}></div>
+
+                                {/* Main mockup card */}
+                                <div className="relative rounded-2xl overflow-hidden border border-gray-100 shadow-2xl bg-white">
+
+                                    {/* Browser chrome */}
+                                    <div className="flex items-center gap-2 px-4 py-3 border-b border-gray-100" style={{ background: '#F8FAFC' }}>
+                                        <span className="w-3 h-3 rounded-full bg-red-300"></span>
+                                        <span className="w-3 h-3 rounded-full bg-yellow-300"></span>
+                                        <span className="w-3 h-3 rounded-full bg-green-300"></span>
+                                        <div className="flex-1 mx-3 px-3 py-1 rounded-md text-xs flex items-center gap-2" style={{ background: '#fff', border: '1px solid #E2E8F0', color: '#94A3B8' }}>
+                                            <i className="fa-solid fa-lock text-[9px]"></i> app.bumarka.io/dashboard
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p className="text-xs text-brand-gray font-medium uppercase tracking-wide">Efficiency</p>
-                                        <p className="text-sm font-bold text-brand-gray">+240% Boost</p>
+
+                                    <div className="flex" style={{ minHeight: 320 }}>
+
+                                        {/* Sidebar */}
+                                        <div className="hidden sm:flex flex-col gap-1 py-4 px-2 border-r border-gray-100 shrink-0" style={{ width: 48, background: '#F8FAFC' }}>
+                                            {[
+                                                { icon: 'fa-gauge',          active: true  },
+                                                { icon: 'fa-hotel',          active: false },
+                                                { icon: 'fa-plane-departure',active: false },
+                                                { icon: 'fa-users-gear',     active: false },
+                                                { icon: 'fa-inbox',          active: false },
+                                                { icon: 'fa-truck',          active: false },
+                                            ].map((item, i) => (
+                                                <div key={i} className="w-8 h-8 rounded-lg flex items-center justify-center mx-auto text-xs"
+                                                     style={item.active
+                                                        ? { background: '#6366F1', color: '#fff' }
+                                                        : { background: 'transparent', color: '#94A3B8' }}>
+                                                    <i className={`fa-solid ${item.icon}`}></i>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        {/* Main content */}
+                                        <div className="flex-1 p-4 overflow-hidden">
+
+                                            {/* Header row */}
+                                            <div className="flex items-center justify-between mb-4">
+                                                <div>
+                                                    <div style={{ fontSize: 13, fontWeight: 700, color: '#0F172A', fontFamily: '"Plus Jakarta Sans",sans-serif' }}>Operations Dashboard</div>
+                                                    <div style={{ fontSize: 10, color: '#94A3B8' }}>May 2025 · All modules</div>
+                                                </div>
+                                                <div className="flex gap-2">
+                                                    <div style={{ fontSize: 10, background: '#F1F5F9', color: '#64748B', padding: '4px 10px', borderRadius: 6, border: '1px solid #E2E8F0' }}>Export</div>
+                                                    <div style={{ fontSize: 10, background: 'linear-gradient(135deg,#6366F1,#8B5CF6)', color: '#fff', padding: '4px 10px', borderRadius: 6, fontWeight: 600 }}>+ New</div>
+                                                </div>
+                                            </div>
+
+                                            {/* KPI row */}
+                                            <div className="grid grid-cols-4 gap-2 mb-4">
+                                                {[
+                                                    { label: 'Bookings',  value: '1,284', delta: '↑ 18%', color: '#6366F1' },
+                                                    { label: 'Revenue',   value: '€94K',  delta: '↑ 24%', color: '#10B981' },
+                                                    { label: 'Active Jobs',value: '47',   delta: '↑ 6%',  color: '#F59E0B' },
+                                                    { label: 'CSAT',      value: '97.2%', delta: '↑ 3%',  color: '#8B5CF6' },
+                                                ].map((k, i) => (
+                                                    <div key={i} className="rounded-xl p-2.5" style={{ background: '#F9FAFB', border: '1px solid #F1F5F9' }}>
+                                                        <div style={{ fontSize: 9, color: '#94A3B8', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600 }}>{k.label}</div>
+                                                        <div style={{ fontSize: 15, fontWeight: 800, color: '#0F172A', fontFamily: '"Plus Jakarta Sans",sans-serif', lineHeight: 1.2, marginTop: 2 }}>{k.value}</div>
+                                                        <div style={{ fontSize: 9, color: k.color, fontWeight: 600, marginTop: 2 }}>{k.delta}</div>
+                                                    </div>
+                                                ))}
+                                            </div>
+
+                                            {/* Chart + list row */}
+                                            <div className="grid grid-cols-5 gap-3">
+
+                                                {/* Bar chart */}
+                                                <div className="col-span-3 rounded-xl p-3" style={{ background: '#F9FAFB', border: '1px solid #F1F5F9' }}>
+                                                    <div className="flex justify-between items-center mb-2">
+                                                        <span style={{ fontSize: 10, color: '#64748B', fontWeight: 600 }}>Revenue Growth</span>
+                                                        <span style={{ fontSize: 9, background: '#EEF2FF', color: '#6366F1', padding: '2px 7px', borderRadius: 4, fontWeight: 600 }}>2025</span>
+                                                    </div>
+                                                    <div className="flex items-end gap-0.5" style={{ height: 52 }}>
+                                                        {[28,42,35,58,48,72,55,80,65,88,74,95].map((h, j) => (
+                                                            <div key={j} className="flex-1 rounded-t-sm"
+                                                                 style={{ height: `${h}%`, background: j >= 9 ? 'linear-gradient(180deg,#818CF8,#6366F1)' : j >= 6 ? 'rgba(99,102,241,0.3)' : '#E0E7FF' }}></div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+
+                                                {/* Module status */}
+                                                <div className="col-span-2 rounded-xl p-3" style={{ background: '#F9FAFB', border: '1px solid #F1F5F9' }}>
+                                                    <div style={{ fontSize: 10, color: '#64748B', fontWeight: 600, marginBottom: 8 }}>Modules Active</div>
+                                                    {[
+                                                        { name: 'Hotel',   pct: 92, color: '#6366F1' },
+                                                        { name: 'Travel',  pct: 78, color: '#8B5CF6' },
+                                                        { name: 'Fleet',   pct: 85, color: '#10B981' },
+                                                        { name: 'HR-Pulse',pct: 70, color: '#F59E0B' },
+                                                    ].map((m, i) => (
+                                                        <div key={i} className="mb-2">
+                                                            <div className="flex justify-between mb-0.5">
+                                                                <span style={{ fontSize: 9, color: '#64748B' }}>{m.name}</span>
+                                                                <span style={{ fontSize: 9, color: m.color, fontWeight: 700 }}>{m.pct}%</span>
+                                                            </div>
+                                                            <div className="rounded-full overflow-hidden" style={{ height: 4, background: '#E2E8F0' }}>
+                                                                <div style={{ width: `${m.pct}%`, height: '100%', borderRadius: 9999, background: m.color }}></div>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            {/* Recent activity */}
+                                            <div className="mt-3 rounded-xl p-3" style={{ background: '#F9FAFB', border: '1px solid #F1F5F9' }}>
+                                                <div style={{ fontSize: 10, color: '#64748B', fontWeight: 600, marginBottom: 8, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Recent Activity</div>
+                                                <div className="flex flex-col gap-2">
+                                                    {[
+                                                        { icon: 'fa-hotel',           label: 'Grand Suites — Room 204 booked',  time: '2m ago',  color: '#6366F1', bg: '#EEF2FF' },
+                                                        { icon: 'fa-plane-departure', label: 'Dubai package confirmed · 3 pax', time: '14m ago', color: '#8B5CF6', bg: '#F5F3FF' },
+                                                        { icon: 'fa-truck',           label: 'Driver #07 assigned · Airport transfer', time: '31m ago', color: '#10B981', bg: '#F0FDF4' },
+                                                    ].map((a, i) => (
+                                                        <div key={i} className="flex items-center gap-2.5">
+                                                            <div className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0" style={{ background: a.bg }}>
+                                                                <i className={`fa-solid ${a.icon} text-[9px]`} style={{ color: a.color }}></i>
+                                                            </div>
+                                                            <span style={{ fontSize: 10, color: '#374151', flex: 1 }}>{a.label}</span>
+                                                            <span style={{ fontSize: 9, color: '#94A3B8' }}>{a.time}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
+
+                                {/* Floating efficiency badge */}
+                                <div className="absolute -left-4 top-10 bg-white px-4 py-3 rounded-xl shadow-lg border border-gray-100 hidden md:flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
+                                    <div className="w-9 h-9 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary shrink-0">
+                                        <i className="fa-solid fa-bolt text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <p className="text-[10px] text-brand-gray font-medium uppercase tracking-wide">Efficiency</p>
+                                        <p className="text-sm font-bold" style={{ color: '#0F172A' }}>+240% Boost</p>
+                                    </div>
+                                </div>
+
+                                {/* Floating live badge */}
+                                <div className="absolute -right-3 bottom-10 bg-white px-3 py-2 rounded-xl shadow-lg border border-gray-100 hidden md:flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                                    <span style={{ fontSize: 11, fontWeight: 600, color: '#0F172A' }}>Live sync · 8 modules</span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -108,7 +243,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
             <section id="features" className="py-[72px] bg-white relative border-y border-gray-100">
                 <div className="mx-3 px-4 md:px-14">
                     <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-green-50 text-brand-primary font-medium text-xs mb-4 border border-green-100">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 text-brand-primary font-medium text-xs mb-4 border border-indigo-100">
                             <span className="w-1.5 h-1.5 rounded-full bg-brand-primary"></span>
                             Our Product Suite
                         </div>
@@ -130,7 +265,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 title: "All-in-One Travel Management System",
                                 page: "product-travel-management",
                                 desc: "Run your entire travel business — bookings, CRM, operations, and finance — in one connected system.",
-                                color: "text-green-500 bg-green-50 border-green-100"
+                                color: "text-indigo-500 bg-indigo-50 border-indigo-100"
                             },
                             {
                                 icon: "fa-solid fa-calculator",
@@ -183,7 +318,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         window.scrollTo(0, 0);
                                     }
                                 }}
-                                className="cursor-pointer bg-[#fafafa] p-6 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full"
+                                className="cursor-pointer bg-[#fafafa] p-6 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:bg-white hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full"
                                 data-aos="fade-up"
                                 data-aos-delay={(i % 4) * 100}
                             >
@@ -297,7 +432,7 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="flex items-center gap-3 px-6 py-4 rounded-full bg-[#fafafa] border border-gray-100 hover:border-green-200 hover:bg-green-50 transition-colors duration-300 cursor-pointer"
+                                className="flex items-center gap-3 px-6 py-4 rounded-full bg-[#fafafa] border border-gray-100 hover:border-indigo-200 hover:bg-indigo-50 transition-colors duration-300 cursor-pointer"
                                 data-aos="zoom-in"
                                 data-aos-delay={i * 100}
                             >
@@ -309,16 +444,17 @@ const ProductPage = ({ onOpenInquiry, setCurrentPage }) => {
                 </div>
             </section>
 
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] text-white text-center relative overflow-hidden"
+                     style={{ background: BRAND.gradientDark }}>
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
 
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-8" data-aos="zoom-in">
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
                         Ready to Simplify and Scale Your Operations?
                     </h2>
-                    <p className="text-lg text-green-50 font-light max-w-2xl mx-auto">
+                    <p className="text-lg text-indigo-100 font-light max-w-2xl mx-auto">
                         Start managing everything from one powerful platform.
                     </p>
                     <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">

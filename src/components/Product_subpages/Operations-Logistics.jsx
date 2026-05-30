@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import PricingSection from "../PricingSection";
 import { PRICING_DATA } from "../../pricingData";
 
@@ -7,7 +7,7 @@ const BrowserChrome = ({ url }) => (
         <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-red-400"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-            <div className="w-3 h-3 rounded-full bg-green-400"></div>
+            <div className="w-3 h-3 rounded-full bg-indigo-400"></div>
         </div>
         {url && (
             <div className="bg-white rounded-md px-3 py-1 text-[10px] md:text-xs text-gray-400 border border-gray-100 font-mono truncate max-w-[60%]">
@@ -47,7 +47,7 @@ const FleetDashboardMockup = () => (
             </div>
 
             {/* Mini map */}
-            <div className="rounded-xl border border-gray-100 bg-gradient-to-br from-green-50 via-white to-blue-50 p-3 relative h-28 overflow-hidden">
+            <div className="rounded-xl border border-gray-100 bg-gradient-to-br from-indigo-50 via-white to-blue-50 p-3 relative h-28 overflow-hidden">
                 <svg viewBox="0 0 200 80" className="absolute inset-0 w-full h-full opacity-60">
                     <path d="M0,40 Q50,10 100,35 T200,30" fill="none" stroke="#10B981" strokeWidth="0.6" strokeDasharray="2,2" />
                     <path d="M0,55 Q60,80 120,50 T200,60" fill="none" stroke="#94a3b8" strokeWidth="0.5" strokeDasharray="2,2" />
@@ -78,7 +78,7 @@ const FleetDashboardMockup = () => (
                     <span className="text-[9px] text-gray-400">Updated 2m ago</span>
                 </div>
                 {[
-                    { id: "VH-204", d: "M. Nasir", s: "On Route", c: "bg-green-50 text-brand-primary" },
+                    { id: "VH-204", d: "M. Nasir", s: "On Route", c: "bg-indigo-50 text-brand-primary" },
                     { id: "VH-188", d: "A. Patel", s: "Idle", c: "bg-yellow-50 text-yellow-600" },
                     { id: "VH-172", d: "—", s: "Service", c: "bg-red-50 text-red-500" },
                 ].map((v, i) => (
@@ -104,8 +104,8 @@ const FleetDashboardMockup = () => (
 const DriverAllocationMockup = () => (
     <div className="bg-white">
         <MobileChrome />
-        <div className="p-4 space-y-3 bg-gradient-to-b from-green-50 to-white">
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3 shadow-md">
+        <div className="p-4 space-y-3 bg-gradient-to-b from-indigo-50 to-white">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3 shadow-md">
                 <p className="text-[9px] uppercase opacity-80 tracking-wider">Today's Trips</p>
                 <p className="text-lg font-bold mt-0.5">14 Active</p>
                 <p className="text-[10px] opacity-90 mt-1">3 awaiting driver</p>
@@ -125,7 +125,7 @@ const DriverAllocationMockup = () => (
                             <p className="text-[11px] font-bold text-brand-dark truncate">{d.n}</p>
                             <p className="text-[9px] text-gray-500 truncate">{d.t}</p>
                         </div>
-                        <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-bold ${d.st === "Assigned" ? "bg-green-50 text-brand-primary" : "bg-yellow-50 text-yellow-600"}`}>
+                        <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-bold ${d.st === "Assigned" ? "bg-indigo-50 text-brand-primary" : "bg-yellow-50 text-yellow-600"}`}>
                             {d.st}
                         </span>
                     </div>
@@ -197,7 +197,7 @@ const GuideDashboardMockup = () => (
                 { n: "Daniya H.", r: 4.7, t: 96, av: false },
             ].map((g, i) => (
                 <div key={i} className="rounded-xl border border-gray-100 bg-white p-2.5 shadow-sm flex items-center gap-2.5">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-primary to-green-300 text-white flex items-center justify-center font-bold text-[11px]">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-primary to-indigo-300 text-white flex items-center justify-center font-bold text-[11px]">
                         {g.n.split(" ").map(s => s[0]).join("")}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -252,7 +252,7 @@ const ResourceAllocationMockup = () => (
             <div className="rounded-xl border border-gray-100 bg-white p-3 shadow-sm">
                 <p className="text-xs font-bold text-brand-dark mb-2">Assets</p>
                 {[
-                    { n: "Camping Gear · Set A", q: "12 / 16", s: "Available", c: "text-brand-primary bg-green-50" },
+                    { n: "Camping Gear · Set A", q: "12 / 16", s: "Available", c: "text-brand-primary bg-indigo-50" },
                     { n: "Speedboat — Marina", q: "1 / 2", s: "Booked", c: "text-blue-600 bg-blue-50" },
                     { n: "Audio Kit · K2", q: "0 / 4", s: "Reserved", c: "text-yellow-600 bg-yellow-50" },
                 ].map((a, i) => (
@@ -288,7 +288,7 @@ const ResourcePlanningMockup = () => (
                         return (
                             <div
                                 key={i}
-                                className={`aspect-square rounded-sm ${heavy ? "bg-brand-primary" : filled ? "bg-green-200" : "bg-gray-100"}`}
+                                className={`aspect-square rounded-sm ${heavy ? "bg-brand-primary" : filled ? "bg-indigo-200" : "bg-gray-100"}`}
                             ></div>
                         );
                     })}
@@ -350,7 +350,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <span className="text-brand-dark font-semibold">Fleet Management</span>
                             </nav>
 
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-truck-fast text-[12px]"></i>
                                 Fleet Management System
                             </div>
@@ -366,7 +366,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={onOpenInquiry}
-                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300"
+                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300"
                                 >
                                     Request Demo
                                 </button>
@@ -394,7 +394,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
 
                         <div className="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative perspective-1000">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
 
                                 <div className="relative z-10 flex items-center gap-6">
                                     <div className="w-2/3 relative group">
@@ -403,7 +403,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         </div>
 
                                         <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 animate-bounce" style={{ animationDuration: "3s" }}>
-                                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
+                                            <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary">
                                                 <i className="fa-solid fa-route"></i>
                                             </div>
                                             <div>
@@ -453,7 +453,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                                className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
                                 data-aos="fade-up"
                                 data-aos-delay={i * 100}
                             >
@@ -496,7 +496,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 relative perspective-1000" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
 
                             <div className="relative z-10 flex items-center gap-6">
                                 <div className="w-2/3 relative group">
@@ -617,7 +617,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         <ResourcePlanningMockup />
                                     </div>
                                     <div className="absolute -bottom-4 -right-4 bg-white p-2 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2 z-20">
-                                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
+                                        <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-xs">
                                             <i className="fa-solid fa-check"></i>
                                         </div>
                                     </div>
@@ -661,7 +661,7 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((stat, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-200 transition-colors"
+                                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-200 transition-colors"
                                 data-aos="zoom-in"
                                 data-aos-delay={i * 100}
                             >
@@ -684,16 +684,16 @@ const OperationsLogisticsPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
 
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-8" data-aos="zoom-in">
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
                         Take Full Control of Your Operations
                     </h2>
-                    <p className="text-xl text-green-50 font-light">
+                    <p className="text-xl text-indigo-50 font-light">
                         Simplify logistics, reduce errors, and scale your business with confidence.
                     </p>
                     <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">

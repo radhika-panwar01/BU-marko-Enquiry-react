@@ -221,7 +221,7 @@ const Pricing = ({ onOpenInquiry }) => {
                                 className={`w-full py-3 rounded-full font-bold mb-8 transition ${
                                     isHighlight
                                         ? 'bg-white text-brand-primary hover:bg-gray-50'
-                                        : 'bg-brand-primary text-white hover:bg-green-700'
+                                        : 'bg-brand-primary text-white hover:bg-brand-primary-d'
                                 }`}
                             >
                                 {plan.cta}

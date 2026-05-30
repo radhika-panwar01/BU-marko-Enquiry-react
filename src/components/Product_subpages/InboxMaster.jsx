@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import PricingSection from "../PricingSection";
 import { PRICING_DATA } from "../../pricingData";
 
@@ -7,7 +7,7 @@ const BrowserChrome = ({ url }) => (
         <div className="flex gap-1.5 sm:gap-2">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-indigo-400"></div>
         </div>
         {url && <div className="bg-white rounded-md px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-xs text-gray-400 border border-gray-100 font-mono truncate max-w-[60%]">{url}</div>}
         <div className="w-8 sm:w-12"></div>
@@ -25,10 +25,10 @@ const MobileChrome = () => (
 const InboxMockup = () => (
     <div className="bg-white">
         <BrowserChrome url="inbox.bu-marka.com/tickets" />
-        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-green-50/30 space-y-3">
+        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-indigo-50/30 space-y-3">
             <div className="flex justify-between items-center">
                 <p className="text-xs font-bold text-brand-dark">All Conversations</p>
-                <span className="text-[10px] px-2 py-0.5 bg-green-50 text-brand-primary rounded-full font-semibold">12 Open</span>
+                <span className="text-[10px] px-2 py-0.5 bg-indigo-50 text-brand-primary rounded-full font-semibold">12 Open</span>
             </div>
             <div className="grid grid-cols-3 gap-2">
                 {[
@@ -46,10 +46,10 @@ const InboxMockup = () => (
                 {[
                     { name: "Ana Costa", msg: "Need help with booking #2891", time: "2m", tag: "Urgent", tagColor: "bg-red-50 text-red-500" },
                     { name: "Rami Khalil", msg: "Invoice question for May", time: "15m", tag: "Billing", tagColor: "bg-blue-50 text-blue-500" },
-                    { name: "Sofia M.", msg: "How do I export my data?", time: "1h", tag: "Support", tagColor: "bg-green-50 text-brand-primary" },
+                    { name: "Sofia M.", msg: "How do I export my data?", time: "1h", tag: "Support", tagColor: "bg-indigo-50 text-brand-primary" },
                 ].map((c, i) => (
                     <div key={i} className="flex items-start gap-2.5 p-2.5">
-                        <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-primary to-green-300 text-white flex items-center justify-center font-bold text-[9px] shrink-0">
+                        <div className="w-7 h-7 rounded-full bg-gradient-to-br from-brand-primary to-indigo-300 text-white flex items-center justify-center font-bold text-[9px] shrink-0">
                             {c.name.split(" ").map(s => s[0]).join("")}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -70,8 +70,8 @@ const InboxMockup = () => (
 const ChatMobileMockup = () => (
     <div className="bg-white">
         <MobileChrome />
-        <div className="p-3 space-y-2.5 bg-gradient-to-b from-green-50/50 to-white">
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3">
+        <div className="p-3 space-y-2.5 bg-gradient-to-b from-indigo-50/50 to-white">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3">
                 <p className="text-[9px] uppercase opacity-80 tracking-wider">Live Chat</p>
                 <p className="text-xs font-bold mt-0.5">Ana Costa</p>
                 <p className="text-[9px] opacity-80 mt-0.5">Online · 2 min ago</p>
@@ -116,7 +116,7 @@ const AnalyticsMockup = () => (
             <div className="grid grid-cols-2 gap-2">
                 {[
                     { l: "Avg. Response", v: "1m 42s", c: "text-brand-primary" },
-                    { l: "CSAT Score", v: "96%", c: "text-green-600" },
+                    { l: "CSAT Score", v: "96%", c: "text-indigo-600" },
                     { l: "Resolved Today", v: "38", c: "text-blue-600" },
                     { l: "AI Suggestions", v: "64%", c: "text-purple-600" },
                 ].map((s, i) => (
@@ -152,7 +152,7 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
     return (
         <main className="pt-[60px] md:pt-20 bg-white font-sans overflow-hidden">
             {/* HERO */}
-            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-green-50/40 overflow-hidden border-b border-gray-100">
+            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-indigo-50/40 overflow-hidden border-b border-gray-100">
                 <div className="absolute top-0 right-0 w-[50%] h-full bg-brand-light pointer-events-none rounded-l-full blur-3xl opacity-60"></div>
                 <div className="mx-3 px-4 md:px-14 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -168,7 +168,7 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <i className="fa-solid fa-chevron-right text-[9px] text-gray-300"></i>
                                 <span className="text-brand-dark font-semibold">InboxMaster</span>
                             </nav>
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-inbox text-[12px]"></i>
                                 InboxMaster
                             </div>
@@ -179,7 +179,7 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 Centralize email, chat, and support tickets in one place. Respond faster, resolve smarter, and delight your customers — powered by AI.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300">
+                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300">
                                     Request Demo
                                 </button>
                                 <button
@@ -192,14 +192,14 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
                         </div>
                         <div className="lg:w-1/2 w-full" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
                                 <div className="relative z-10 flex items-center gap-3 sm:gap-6">
                                     <div className="w-2/3 relative group">
                                         <div className="bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform -rotate-2 group-hover:rotate-0 transition-all duration-500">
                                             <InboxMockup />
                                         </div>
                                         <div className="absolute -bottom-5 -left-3 sm:-left-6 bg-white p-3 sm:p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-2 sm:gap-3 animate-bounce" style={{ animationDuration: "3s" }}>
-                                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
+                                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary">
                                                 <i className="fa-solid fa-bolt"></i>
                                             </div>
                                             <div>
@@ -240,7 +240,7 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
                         ].map((item, i) => (
                             <div
                                 key={i}
-                                className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
+                                className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
                                 data-aos="fade-up"
                                 data-aos-delay={(i % 4) * 100}
                             >
@@ -282,7 +282,7 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 w-full relative group" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
                             <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
                                 <InboxMockup />
                             </div>
@@ -350,7 +350,7 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { i: "fa-solid fa-robot", v: "AI-Native", l: "Smart reply engine" },
                             { i: "fa-solid fa-globe", v: "Multilingual", l: "40+ auto-translated languages" },
                         ].map((s, i) => (
-                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
                                 <div className="w-10 h-10 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center mx-auto mb-3"><i className={s.i}></i></div>
                                 <h4 className="text-brand-primary font-bold text-base sm:text-xl mb-1">{s.v}</h4>
                                 <p className="text-brand-gray text-xs sm:text-sm">{s.l}</p>
@@ -368,15 +368,15 @@ const InboxMasterPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-6 sm:space-y-8" data-aos="zoom-in">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-tight">
                         Turn Every Conversation Into a Great Experience
                     </h2>
-                    <p className="text-base sm:text-xl text-green-50 font-light">
+                    <p className="text-base sm:text-xl text-indigo-50 font-light">
                         One inbox. Every channel. Zero missed messages.
                     </p>
                     <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">

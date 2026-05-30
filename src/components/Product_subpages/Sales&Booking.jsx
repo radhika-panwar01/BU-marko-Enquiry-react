@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import Book1 from "../../assets/images/productimages/Book-1.png";
 import Book2 from "../../assets/images/productimages/Book-2.png";
 import CRM1 from "../../assets/images/productimages/CRM-1.png";
@@ -44,7 +44,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </nav>
 
                             {/* Product label pill */}
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-hotel text-[12px]"></i>
                                 Hotel Management System
                             </div>
@@ -60,7 +60,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={onOpenInquiry}
-                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300"
+                                    className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300"
                                 >
                                     Request Demo
                                 </button>
@@ -75,7 +75,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
 
                         <div className="lg:w-1/2" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative perspective-1000">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
 
                                 <div className="relative z-10 flex items-center gap-6">
                                     {/* Main Mockup */}
@@ -85,14 +85,14 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                                             <div className="bg-gray-50/80 backdrop-blur px-4 py-3 flex items-center gap-2 border-b border-gray-100">
                                                 <div className="w-3 h-3 rounded-full bg-red-400"></div>
                                                 <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                                <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                                                <div className="w-3 h-3 rounded-full bg-indigo-400"></div>
                                             </div>
                                             <img src={Book1} alt="Dashboard UI" className="w-full object-cover" />
                                         </div>
 
                                         {/* Floating Badge */}
                                         <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
-                                            <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
+                                            <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary">
                                                 <i className="fa-solid fa-chart-line"></i>
                                             </div>
                                             <div>
@@ -146,7 +146,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 desc: "Manage client profiles, history, and preferences to build better, long-lasting relationships."
                             }
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="w-14 h-14 rounded-xl bg-brand-light flex items-center justify-center text-2xl text-brand-primary mb-6 group-hover:scale-110 transition-transform duration-300">
                                     <i className={item.icon}></i>
                                 </div>
@@ -188,7 +188,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 relative group" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl group-hover:rotate-2 transition-transform duration-700"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl group-hover:rotate-2 transition-transform duration-700"></div>
 
                             <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
                                 {/* Browser Frame */}
@@ -196,7 +196,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                                     <div className="flex gap-2">
                                         <div className="w-3 h-3 rounded-full bg-red-400"></div>
                                         <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                                        <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                                        <div className="w-3 h-3 rounded-full bg-indigo-400"></div>
                                     </div>
                                     <div className="bg-white rounded-md px-3 py-1 text-xs text-gray-400 border border-gray-100 font-mono">
                                         admin.bu-operations.com/bookings
@@ -315,7 +315,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         <img src={CRM2} alt="Client Mobile View" className="w-full object-cover" />
                                     </div>
                                     <div className="absolute -bottom-4 -right-4 bg-white p-2 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2 z-20">
-                                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xs">
+                                        <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 text-xs">
                                             <i className="fa-solid fa-check"></i>
                                         </div>
                                     </div>
@@ -326,7 +326,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                                         <div className="bg-gray-50/90 border-b border-gray-100 px-3 py-2 flex items-center gap-2">
                                             <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
                                             <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                                            <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                                            <div className="w-2.5 h-2.5 rounded-full bg-indigo-400"></div>
                                         </div>
                                         <img src={CRM1} alt="CRM Dashboard" className="w-full object-cover" />
                                     </div>
@@ -362,7 +362,7 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { value: "Destinations", label: "Popular Packages" },
                             { value: "Productivity", label: "Agent Performance" }
                         ].map((stat, i) => (
-                            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
                                 <h4 className="text-brand-primary font-bold text-xl mb-1">{stat.value}</h4>
                                 <p className="text-brand-gray text-sm">{stat.label}</p>
                             </div>
@@ -379,16 +379,16 @@ const SalesBookingPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA SECTION */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
 
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-8" data-aos="zoom-in">
                     <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-tight">
                         Ready to Boost Your Sales Efficiency?
                     </h2>
-                    <p className="text-xl text-green-50 font-light">
+                    <p className="text-xl text-indigo-50 font-light">
                         Close deals faster, reduce manual work, and deliver seamless booking experiences to your clients.
                     </p>
                     <div className="pt-6">

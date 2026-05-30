@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import PricingSection from "../PricingSection";
 import { PRICING_DATA } from "../../pricingData";
 
@@ -7,7 +7,7 @@ const BrowserChrome = ({ url }) => (
         <div className="flex gap-1.5 sm:gap-2">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-indigo-400"></div>
         </div>
         {url && (
             <div className="bg-white rounded-md px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-xs text-gray-400 border border-gray-100 font-mono truncate max-w-[60%]">
@@ -86,7 +86,7 @@ const UnifiedDashboardMockup = () => (
                     <span className="text-[9px] text-gray-400">Live</span>
                 </div>
                 {[
-                    { i: "fa-calendar-check", c: "text-brand-primary bg-green-50", t: "12 new bookings", d: "2 min ago" },
+                    { i: "fa-calendar-check", c: "text-brand-primary bg-indigo-50", t: "12 new bookings", d: "2 min ago" },
                     { i: "fa-money-bill-wave", c: "text-blue-600 bg-blue-50", t: "$3,200 received", d: "5 min ago" },
                     { i: "fa-route", c: "text-yellow-600 bg-yellow-50", t: "3 tours dispatched", d: "12 min ago" },
                 ].map((a, i) => (
@@ -107,8 +107,8 @@ const UnifiedDashboardMockup = () => (
 const MobileCompanionMockup = () => (
     <div className="bg-white">
         <MobileChrome />
-        <div className="p-3 sm:p-4 space-y-3 bg-gradient-to-b from-green-50 to-white">
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3">
+        <div className="p-3 sm:p-4 space-y-3 bg-gradient-to-b from-indigo-50 to-white">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3">
                 <p className="text-[9px] uppercase opacity-80 tracking-wider">All-in-One Hub</p>
                 <p className="text-sm font-bold mt-0.5">Today's Snapshot</p>
                 <div className="grid grid-cols-3 gap-2 mt-2">
@@ -118,7 +118,7 @@ const MobileCompanionMockup = () => (
                 </div>
             </div>
             {[
-                { i: "fa-calendar-check", l: "Bookings", c: "text-brand-primary bg-green-50" },
+                { i: "fa-calendar-check", l: "Bookings", c: "text-brand-primary bg-indigo-50" },
                 { i: "fa-users", l: "CRM", c: "text-blue-600 bg-blue-50" },
                 { i: "fa-truck", l: "Operations", c: "text-orange-500 bg-orange-50" },
                 { i: "fa-wallet", l: "Finance", c: "text-purple-600 bg-purple-50" },
@@ -139,11 +139,11 @@ const MobileCompanionMockup = () => (
 const WorkflowMockup = () => (
     <div className="bg-white">
         <BrowserChrome url="admin.bu-operations.com/workflow" />
-        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-green-50/40">
+        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-indigo-50/40">
             <p className="text-xs font-bold text-brand-dark mb-4">Connected Workflow</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 relative">
                 {[
-                    { i: "fa-calendar-check", l: "Book", c: "bg-green-50 text-brand-primary" },
+                    { i: "fa-calendar-check", l: "Book", c: "bg-indigo-50 text-brand-primary" },
                     { i: "fa-user-tie", l: "Assign", c: "bg-blue-50 text-blue-600" },
                     { i: "fa-route", l: "Operate", c: "bg-yellow-50 text-yellow-600" },
                     { i: "fa-wallet", l: "Bill", c: "bg-purple-50 text-purple-600" },
@@ -182,7 +182,7 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
     return (
         <main className="pt-[60px] md:pt-20 bg-white font-sans overflow-hidden">
             {/* HERO */}
-            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-green-50/40 overflow-hidden border-b border-gray-100">
+            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-indigo-50/40 overflow-hidden border-b border-gray-100">
                 <div className="absolute top-0 right-0 w-[50%] h-full bg-brand-light pointer-events-none rounded-l-full blur-3xl opacity-60"></div>
                 <div className="mx-3 px-4 md:px-14 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -200,7 +200,7 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <span className="text-brand-dark font-semibold">All-in-One Travel</span>
                             </nav>
 
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-globe text-[12px]"></i>
                                 All-in-One Travel Management
                             </div>
@@ -211,7 +211,7 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 Run your entire travel business from a single platform — bookings, CRM, operations, and finance, all working together.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300">
+                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300">
                                     Request Demo
                                 </button>
                                 <button onClick={() => document.getElementById("core-features").scrollIntoView({ behavior: "smooth" })} className="bg-white text-brand-dark border border-gray-200 px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:border-brand-primary hover:text-brand-primary transition-all duration-300">
@@ -233,14 +233,14 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                         </div>
                         <div className="lg:w-1/2 w-full" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
                                 <div className="relative z-10 flex items-center gap-3 sm:gap-6">
                                     <div className="w-2/3 relative group">
                                         <div className="bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform -rotate-2 group-hover:rotate-0 transition-all duration-500">
                                             <UnifiedDashboardMockup />
                                         </div>
                                         <div className="absolute -bottom-5 -left-3 sm:-left-6 bg-white p-3 sm:p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-2 sm:gap-3 animate-bounce" style={{ animationDuration: "3s" }}>
-                                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
+                                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary">
                                                 <i className="fa-solid fa-bolt"></i>
                                             </div>
                                             <div>
@@ -274,7 +274,7 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { icon: "fa-solid fa-shuffle", title: "Cross-Module Automation", desc: "Confirm a booking and watch invoices, schedules, and assignments update on their own." },
                             { icon: "fa-solid fa-chart-pie", title: "Single Source of Truth", desc: "One dashboard, one set of numbers — every team works from the same live data." },
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 100}>
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-light flex items-center justify-center text-xl sm:text-2xl text-brand-primary mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
                                     <i className={item.icon}></i>
                                 </div>
@@ -313,7 +313,7 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 w-full relative group" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
                             <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
                                 <UnifiedDashboardMockup />
                             </div>
@@ -410,7 +410,7 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { i: "fa-solid fa-shield-halved", v: "Secure", l: "Role-based access" },
                             { i: "fa-solid fa-chart-line", v: "Scale", l: "Multi-entity ready" },
                         ].map((s, i) => (
-                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
                                 <div className="w-10 h-10 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center mx-auto mb-3"><i className={s.i}></i></div>
                                 <h4 className="text-brand-primary font-bold text-base sm:text-xl mb-1">{s.v}</h4>
                                 <p className="text-brand-gray text-xs sm:text-sm">{s.l}</p>
@@ -428,13 +428,13 @@ const TravelManagementPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-6 sm:space-y-8" data-aos="zoom-in">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-tight">One System. Every Workflow. Total Clarity.</h2>
-                    <p className="text-base sm:text-xl text-green-50 font-light">Stop stitching tools together — run your travel business from one connected platform.</p>
+                    <p className="text-base sm:text-xl text-indigo-50 font-light">Stop stitching tools together — run your travel business from one connected platform.</p>
                     <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                         <button onClick={onOpenInquiry} className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1">Request Demo</button>
                     </div>

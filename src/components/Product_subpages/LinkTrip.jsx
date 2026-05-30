@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import PricingSection from "../PricingSection";
 import { PRICING_DATA } from "../../pricingData";
 
@@ -7,7 +7,7 @@ const BrowserChrome = ({ url }) => (
         <div className="flex gap-1.5 sm:gap-2">
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400"></div>
             <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400"></div>
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400"></div>
+            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-indigo-400"></div>
         </div>
         {url && (
             <div className="bg-white rounded-md px-2 sm:px-3 py-0.5 sm:py-1 text-[9px] sm:text-xs text-gray-400 border border-gray-100 font-mono truncate max-w-[60%]">
@@ -30,7 +30,7 @@ const MobileChrome = () => (
 const TripBuilderMockup = () => (
     <div className="bg-white">
         <BrowserChrome url="linktrip.bu-marka.com/builder" />
-        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-green-50/30 space-y-3">
+        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-indigo-50/30 space-y-3">
             <div className="flex justify-between items-center">
                 <p className="text-xs font-bold text-brand-dark">Trip Builder</p>
                 <span className="text-[10px] px-2 py-0.5 bg-brand-light text-brand-primary rounded-full font-semibold">Bali Explorer — 7 Days</span>
@@ -49,12 +49,12 @@ const TripBuilderMockup = () => (
             </div>
             <div className="rounded-xl border border-gray-100 bg-white divide-y divide-gray-50 overflow-hidden shadow-sm">
                 {[
-                    { icon: "fa-plane", label: "Flight", detail: "LIS → DPS · Direct", color: "text-brand-primary bg-green-50" },
-                    { icon: "fa-hotel", label: "Hotel", detail: "Kuta Beach Resort · 7N", color: "text-brand-primary bg-green-50" },
-                    { icon: "fa-compass", label: "Tour", detail: "Ubud Full Day Explorer", color: "text-brand-primary bg-green-50" },
-                    { icon: "fa-ship", label: "Ferry", detail: "Bali → Nusa Penida", color: "text-brand-primary bg-green-50" },
-                    { icon: "fa-car", label: "Transfer", detail: "Airport · Private Van", color: "text-brand-primary bg-green-50" },
-                    { icon: "fa-key", label: "Rental", detail: "Scooter · 5 Days", color: "text-brand-primary bg-green-50" },
+                    { icon: "fa-plane", label: "Flight", detail: "LIS → DPS · Direct", color: "text-brand-primary bg-indigo-50" },
+                    { icon: "fa-hotel", label: "Hotel", detail: "Kuta Beach Resort · 7N", color: "text-brand-primary bg-indigo-50" },
+                    { icon: "fa-compass", label: "Tour", detail: "Ubud Full Day Explorer", color: "text-brand-primary bg-indigo-50" },
+                    { icon: "fa-ship", label: "Ferry", detail: "Bali → Nusa Penida", color: "text-brand-primary bg-indigo-50" },
+                    { icon: "fa-car", label: "Transfer", detail: "Airport · Private Van", color: "text-brand-primary bg-indigo-50" },
+                    { icon: "fa-key", label: "Rental", detail: "Scooter · 5 Days", color: "text-brand-primary bg-indigo-50" },
                 ].map((s, i) => (
                     <div key={i} className="flex items-center gap-2.5 px-3 py-2">
                         <div className={`w-6 h-6 rounded-lg ${s.color} flex items-center justify-center shrink-0`}>
@@ -76,7 +76,7 @@ const TripBuilderMockup = () => (
 const TripScheduleMockup = () => (
     <div className="bg-white">
         <BrowserChrome url="linktrip.bu-marka.com/schedule" />
-        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-green-50/30 space-y-3">
+        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-indigo-50/30 space-y-3">
             <div className="flex justify-between items-center">
                 <p className="text-xs font-bold text-brand-dark">Trip Itinerary</p>
                 <span className="text-[10px] text-gray-400">7 days · 6 nights</span>
@@ -121,14 +121,14 @@ const TripScheduleMockup = () => (
 const TripSummaryMockup = () => (
     <div className="bg-white">
         <BrowserChrome url="linktrip.bu-marka.com/summary" />
-        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-green-50/20 space-y-3">
+        <div className="p-4 sm:p-5 bg-gradient-to-br from-white to-indigo-50/20 space-y-3">
             <div className="flex justify-between items-center">
                 <p className="text-xs font-bold text-brand-dark">Trip Summary</p>
                 <button className="text-[9px] px-2.5 py-1 bg-brand-primary text-white rounded-lg font-semibold flex items-center gap-1">
                     <i className="fa-solid fa-file-pdf"></i> Export PDF
                 </button>
             </div>
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 p-3 text-white">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 p-3 text-white">
                 <p className="text-[9px] opacity-80 uppercase tracking-wider">Bali Explorer Package</p>
                 <p className="text-sm font-bold">Total: €3,240</p>
                 <p className="text-[9px] opacity-70 mt-0.5">4 guests · 7 days · 6 services</p>
@@ -159,9 +159,9 @@ const TripSummaryMockup = () => (
 const KitListMockup = () => (
     <div className="bg-white">
         <MobileChrome />
-        <div className="p-3 sm:p-4 space-y-3 bg-gradient-to-b from-green-50 to-white">
+        <div className="p-3 sm:p-4 space-y-3 bg-gradient-to-b from-indigo-50 to-white">
             <p className="text-[11px] font-bold text-brand-dark">Packing & Kit List</p>
-            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-green-700 text-white p-3">
+            <div className="rounded-xl bg-gradient-to-br from-brand-primary to-indigo-700 text-white p-3">
                 <p className="text-[9px] opacity-80">Bali — Tropical & Active</p>
                 <p className="text-sm font-bold mt-0.5">Kit Checklist</p>
                 <p className="text-[9px] opacity-70 mt-1">18 items · 3 categories</p>
@@ -214,7 +214,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
         <main className="pt-[60px] md:pt-20 bg-white font-sans overflow-hidden">
 
             {/* HERO */}
-            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-green-50/40 overflow-hidden border-b border-gray-100">
+            <section className="relative pt-12 sm:pt-20 pb-16 lg:pb-28 bg-gradient-to-b from-white to-indigo-50/40 overflow-hidden border-b border-gray-100">
                 <div className="absolute top-0 right-0 w-[50%] h-full bg-brand-light pointer-events-none rounded-l-full blur-3xl opacity-60"></div>
                 <div className="mx-3 px-4 md:px-14 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
@@ -231,7 +231,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 <span className="text-brand-dark font-semibold">BU LinkTrip</span>
                             </nav>
 
-                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-green-100">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-light text-brand-primary font-medium text-sm mb-5 shadow-sm border border-indigo-100">
                                 <i className="fa-solid fa-link text-[12px]"></i>
                                 Trip Booking & Management Platform
                             </div>
@@ -242,7 +242,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                                 BU LinkTrip combines flights, accommodation, tours, ferry, transfers, and rentals into a single bookable trip — with live schedules, PDF proposals, kit lists, and full pricing breakdowns.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-green-700 shadow-lg shadow-green-500/20 transition-all duration-300">
+                                <button onClick={onOpenInquiry} className="bg-brand-primary text-white px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:bg-indigo-700 shadow-lg shadow-indigo-500/20 transition-all duration-300">
                                     Request Demo
                                 </button>
                                 <button onClick={() => document.getElementById("services-section").scrollIntoView({ behavior: "smooth" })} className="bg-white text-brand-dark border border-gray-200 px-6 py-2 rounded-xl font-medium text-base sm:text-lg hover:border-brand-primary hover:text-brand-primary transition-all duration-300">
@@ -264,14 +264,14 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                         </div>
                         <div className="lg:w-1/2 w-full" data-aos="fade-left" data-aos-delay="200">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-green-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-brand-primary to-indigo-300 rounded-[2rem] transform rotate-3 scale-105 opacity-20 blur-2xl"></div>
                                 <div className="relative z-10 flex items-center gap-3 sm:gap-6">
                                     <div className="w-2/3 relative group">
                                         <div className="bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform -rotate-2 group-hover:rotate-0 transition-all duration-500">
                                             <TripBuilderMockup />
                                         </div>
                                         <div className="absolute -bottom-5 -left-3 sm:-left-6 bg-white p-3 sm:p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-2 sm:gap-3 animate-bounce" style={{ animationDuration: "3s" }}>
-                                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-green-100 flex items-center justify-center text-brand-primary">
+                                            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-indigo-100 flex items-center justify-center text-brand-primary">
                                                 <i className="fa-solid fa-file-pdf"></i>
                                             </div>
                                             <div>
@@ -301,7 +301,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                     </div>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                         {services.map((svc, i) => (
-                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 80}>
+                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 80}>
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-light flex items-center justify-center text-xl sm:text-2xl text-brand-primary mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
                                     <i className={`fa-solid ${svc.icon}`}></i>
                                 </div>
@@ -341,7 +341,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 w-full relative group" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
                             <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
                                 <TripBuilderMockup />
                             </div>
@@ -355,7 +355,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                 <div className="mx-3 px-4 md:px-14">
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 w-full order-2 lg:order-1 relative group" data-aos="fade-right">
-                            <div className="absolute inset-0 bg-gradient-to-tr from-green-200 to-brand-primary rounded-[2rem] transform rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-tr from-indigo-200 to-brand-primary rounded-[2rem] transform rotate-2 scale-105 opacity-20 blur-xl"></div>
                             <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
                                 <TripScheduleMockup />
                             </div>
@@ -415,7 +415,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                             </ul>
                         </div>
                         <div className="lg:w-1/2 w-full relative group" data-aos="fade-left">
-                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-green-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-primary to-indigo-200 rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-xl"></div>
                             <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden transform group-hover:-translate-y-2 transition-all duration-500">
                                 <TripSummaryMockup />
                             </div>
@@ -430,7 +430,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                     <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                         <div className="lg:w-1/2 w-full order-2 lg:order-1 flex justify-center" data-aos="fade-right">
                             <div className="relative group max-w-[280px] sm:max-w-xs w-full">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-green-200 to-brand-primary rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-2xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-indigo-200 to-brand-primary rounded-[2rem] transform -rotate-2 scale-105 opacity-20 blur-2xl"></div>
                                 <div className="relative z-10 bg-white rounded-2xl border border-gray-100 shadow-2xl overflow-hidden">
                                     <KitListMockup />
                                 </div>
@@ -477,7 +477,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { i: "fa-solid fa-file-pdf", v: "PDF", l: "Proposal export" },
                             { i: "fa-solid fa-list-check", v: "Kit List", l: "Auto-generated" },
                         ].map((s, i) => (
-                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-green-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
+                            <div key={i} className="bg-white p-5 sm:p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-200 transition-colors" data-aos="zoom-in" data-aos-delay={i * 100}>
                                 <div className="w-10 h-10 rounded-lg bg-brand-light text-brand-primary flex items-center justify-center mx-auto mb-3">
                                     <i className={s.i}></i>
                                 </div>
@@ -505,7 +505,7 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
                             { icon: "fa-ticket", title: "Ticketing & Vouchers", desc: "Generate dynamic vouchers and digital tickets for every service in the trip package." },
                             { icon: "fa-robot", title: "AI-Powered Upgrades", desc: "Smart personalized upgrade suggestions and AI-powered custom trip creation for premium clients." },
                         ].map((item, i) => (
-                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-green-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 80}>
+                            <div key={i} className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 hover:border-indigo-200 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group" data-aos="fade-up" data-aos-delay={i * 80}>
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-brand-light flex items-center justify-center text-xl sm:text-2xl text-brand-primary mb-5 sm:mb-6 group-hover:scale-110 transition-transform">
                                     <i className={`fa-solid ${item.icon}`}></i>
                                 </div>
@@ -525,13 +525,13 @@ const LinkTripPage = ({ onOpenInquiry, setCurrentPage }) => {
             />
 
             {/* CTA */}
-            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-green-800 text-white text-center relative overflow-hidden">
+            <section className="py-[72px] bg-gradient-to-br from-brand-primary to-indigo-800 text-white text-center relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
                 <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-10 rounded-full filter blur-3xl mix-blend-overlay"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-green-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-400 opacity-20 rounded-full filter blur-3xl mix-blend-overlay"></div>
                 <div className="max-w-3xl mx-auto px-6 relative z-10 space-y-6 sm:space-y-8" data-aos="zoom-in">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight tracking-tight">One Link. The Whole Trip. Every Detail.</h2>
-                    <p className="text-base sm:text-xl text-green-50 font-light">Stop building trips across five tools — give your clients one seamless, priced, and beautiful experience.</p>
+                    <p className="text-base sm:text-xl text-indigo-50 font-light">Stop building trips across five tools — give your clients one seamless, priced, and beautiful experience.</p>
                     <div className="pt-4 sm:pt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
                         <button onClick={onOpenInquiry} className="bg-white text-brand-primary px-6 py-2 rounded-xl font-bold text-base sm:text-lg hover:bg-gray-50 shadow-xl transition-all duration-300 transform hover:-translate-y-1">Request Demo</button>
                     </div>
