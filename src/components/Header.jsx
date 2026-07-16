@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { productMenuPages } from '../pages';
+import BuMarkaLogo from './BuMarkaLogo';
 
 const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
   const [mobileOpen, setMobileOpen]           = useState(false);
@@ -50,14 +51,7 @@ const Header = ({ onOpenInquiry, setCurrentPage, setScrollTarget }) => {
         <button onClick={() => goPage('home')}
                 className="flex items-center gap-2.5 shrink-0 group"
                 aria-label="Go home">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center"
-               style={{ background: 'linear-gradient(135deg, #6366F1, #8B5CF6)' }}>
-            <i className="fa-solid fa-bolt text-white text-sm"></i>
-          </div>
-          <span className="font-bold text-lg tracking-tight"
-                style={{ fontFamily: '"Plus Jakarta Sans", Inter, sans-serif', color: '#0F172A' }}>
-            Bu<span style={{ color: '#6366F1' }}>Marka</span>
-          </span>
+          <BuMarkaLogo markClassName="h-8 w-8 sm:h-9 sm:w-9" textClassName="text-lg" />
         </button>
 
         {/* ── Desktop nav ── */}
