@@ -4,6 +4,7 @@ const BuMarkaLogo = ({ markClassName = 'h-8 w-8', textClassName = 'text-lg', sho
   <>
     <svg viewBox="0 0 200 130" className={markClassName} aria-hidden="true">
       <defs>
+        
         <linearGradient id="bmOuter" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#6366F1" />
           <stop offset="100%" stopColor="#8B5CF6" />
